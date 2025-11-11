@@ -120,6 +120,7 @@ flutter:
     - assets/contents/library/
     - assets/contents/meta/
     - assets/contents/foundation/
+    - assets/contents/timeline/
     - assets/images/
     - assets/images/brand/
     - assets/images/headshots/

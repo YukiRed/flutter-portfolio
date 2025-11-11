@@ -36,12 +36,218 @@ class Shell extends StatelessWidget {
             ? null
             : [
                 _nav(context, '/', context.l10n.navHome),
-                _nav(context, '/projects', context.l10n.navProjects),
-                _nav(context, '/blog', context.l10n.navBlog),
-                _nav(context, '/labs', context.l10n.navLabs),
-                _nav(context, '/library', context.l10n.navLibrary),
+
+                // Work menu: combined Projects + Labs under a single dropdown
+                PopupMenuButton<String>(
+                  onSelected: (v) {
+                    // Navigate to /work with an optional filter query param
+                    if (v == 'all') {
+                      context.go('/work');
+                    } else {
+                      context.go('/work?f=$v');
+                    }
+                  },
+                  child: TextButton(
+                    onPressed: null,
+                    style: ButtonStyle(
+                      foregroundColor: WidgetStateProperty.all(
+                        Theme.of(context).colorScheme.onSurface,
+                      ),
+                      textStyle: WidgetStateProperty.all(
+                        Theme.of(context).textTheme.labelLarge,
+                      ),
+                      overlayColor: WidgetStateProperty.all(Colors.transparent),
+                      splashFactory: NoSplash.splashFactory,
+                    ),
+                    child: const Text('Work'),
+                  ),
+                  itemBuilder: (ctx) {
+                    final c = Theme.of(ctx).colorScheme.onSurface;
+                    return [
+                      PopupMenuItem(
+                        value: 'all',
+                        child: Row(
+                          children: [
+                            Icon(Icons.view_list, size: 18, color: c),
+                            const SizedBox(width: 8),
+                            Text('All', style: TextStyle(color: c)),
+                          ],
+                        ),
+                      ),
+                      PopupMenuItem(
+                        value: 'projects',
+                        child: Row(
+                          children: [
+                            Icon(Icons.work_outline, size: 18, color: c),
+                            const SizedBox(width: 8),
+                            Text(
+                              context.l10n.navProjects,
+                              style: TextStyle(color: c),
+                            ),
+                          ],
+                        ),
+                      ),
+                      PopupMenuItem(
+                        value: 'labs',
+                        child: Row(
+                          children: [
+                            Icon(Icons.science_outlined, size: 18, color: c),
+                            const SizedBox(width: 8),
+                            Text(
+                              context.l10n.navLabs,
+                              style: TextStyle(color: c),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ];
+                  },
+                ),
+
+                // Explore menu: group Blog, Library, People
+                PopupMenuButton<String>(
+                  onSelected: (v) {
+                    switch (v) {
+                      case 'blog':
+                        context.go('/blog');
+                        break;
+                      case 'library':
+                        context.go('/library');
+                        break;
+                      case 'people':
+                        context.go('/people');
+                        break;
+                    }
+                  },
+                  child: TextButton(
+                    onPressed: null,
+                    style: ButtonStyle(
+                      foregroundColor: WidgetStateProperty.all(
+                        Theme.of(context).colorScheme.onSurface,
+                      ),
+                      textStyle: WidgetStateProperty.all(
+                        Theme.of(context).textTheme.labelLarge,
+                      ),
+                      overlayColor: WidgetStateProperty.all(Colors.transparent),
+                      splashFactory: NoSplash.splashFactory,
+                    ),
+                    child: const Text('Explore'),
+                  ),
+                  itemBuilder: (ctx) {
+                    final c = Theme.of(ctx).colorScheme.onSurface;
+                    return [
+                      PopupMenuItem(
+                        value: 'blog',
+                        child: Row(
+                          children: [
+                            Icon(Icons.article_outlined, size: 18, color: c),
+                            const SizedBox(width: 8),
+                            Text(
+                              context.l10n.navBlog,
+                              style: TextStyle(color: c),
+                            ),
+                          ],
+                        ),
+                      ),
+                      PopupMenuItem(
+                        value: 'library',
+                        child: Row(
+                          children: [
+                            Icon(Icons.menu_book_outlined, size: 18, color: c),
+                            const SizedBox(width: 8),
+                            Text(
+                              context.l10n.navLibrary,
+                              style: TextStyle(color: c),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const PopupMenuDivider(),
+                      PopupMenuItem(
+                        value: 'people',
+                        child: Row(
+                          children: [
+                            Icon(Icons.people_outlined, size: 18, color: c),
+                            const SizedBox(width: 8),
+                            Text('People', style: TextStyle(color: c)),
+                          ],
+                        ),
+                      ),
+                    ];
+                  },
+                ),
                 if (cfg.showMeta) _nav(context, '/meta', context.l10n.navMeta),
-                _nav(context, '/foundation', context.l10n.navFoundation),
+
+                // About menu: contains Foundation and other about-related pages
+                PopupMenuButton<String>(
+                  onSelected: (v) {
+                    switch (v) {
+                      case 'about':
+                        context.go('/pages/about');
+                        break;
+                      case 'foundation':
+                        context.go('/foundation');
+                        break;
+                      case 'credits':
+                        context.go('/pages/credits');
+                        break;
+                    }
+                  },
+                  child: TextButton(
+                    onPressed: null,
+                    style: ButtonStyle(
+                      foregroundColor: WidgetStateProperty.all(
+                        Theme.of(context).colorScheme.onSurface,
+                      ),
+                      textStyle: WidgetStateProperty.all(
+                        Theme.of(context).textTheme.labelLarge,
+                      ),
+                      overlayColor: WidgetStateProperty.all(Colors.transparent),
+                      splashFactory: NoSplash.splashFactory,
+                    ),
+                    child: const Text('About'),
+                  ),
+                  itemBuilder: (ctx) {
+                    final c = Theme.of(ctx).colorScheme.onSurface;
+                    return [
+                      PopupMenuItem(
+                        value: 'about',
+                        child: Row(
+                          children: [
+                            Icon(Icons.info_outline, size: 18, color: c),
+                            const SizedBox(width: 8),
+                            Text('About', style: TextStyle(color: c)),
+                          ],
+                        ),
+                      ),
+                      PopupMenuItem(
+                        value: 'foundation',
+                        child: Row(
+                          children: [
+                            Icon(Icons.layers_outlined, size: 18, color: c),
+                            const SizedBox(width: 8),
+                            Text(
+                              context.l10n.navFoundation,
+                              style: TextStyle(color: c),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const PopupMenuDivider(),
+                      PopupMenuItem(
+                        value: 'credits',
+                        child: Row(
+                          children: [
+                            Icon(Icons.star_outline, size: 18, color: c),
+                            const SizedBox(width: 8),
+                            Text('Credits', style: TextStyle(color: c)),
+                          ],
+                        ),
+                      ),
+                    ];
+                  },
+                ),
+                _nav(context, '/timeline', context.l10n.navTimeline),
                 _nav(context, '/services', context.l10n.navServices),
                 _nav(context, '/contact', context.l10n.navContact),
                 _nav(context, '/resume', context.l10n.navResume),
@@ -71,7 +277,15 @@ class Shell extends StatelessWidget {
   }
 
   Widget _nav(BuildContext context, String path, String label) {
-    return TextButton(onPressed: () => context.go(path), child: Text(label));
+    final style = TextButton.styleFrom(
+      foregroundColor: Theme.of(context).colorScheme.onSurface,
+      textStyle: Theme.of(context).textTheme.labelLarge,
+    );
+    return TextButton(
+      onPressed: () => context.go(path),
+      style: style,
+      child: Text(label),
+    );
   }
 }
 
@@ -89,11 +303,39 @@ class _MobileDrawer extends StatelessWidget {
           children: [
             _tile(context, '/', context.l10n.navHome, Icons.home_outlined),
             const Divider(height: 16),
+            _tile(context, '/work', 'Work', Icons.apps_outlined),
+            // _tile(
+            //   context,
+            //   '/projects',
+            //   context.l10n.navProjects,
+            //   Icons.apps_outlined,
+            // ),
             _tile(
               context,
-              '/projects',
-              context.l10n.navProjects,
-              Icons.apps_outlined,
+              '/blog',
+              context.l10n.navBlog,
+              Icons.article_outlined,
+            ),
+            // _tile(
+            //   context,
+            //   '/labs',
+            //   context.l10n.navLabs,
+            //   Icons.science_outlined,
+            // ),
+            _tile(
+              context,
+              '/library',
+              context.l10n.navLibrary,
+              Icons.menu_book_outlined,
+            ),
+            const Divider(height: 16),
+            // Explore group
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Text(
+                'Explore',
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
             ),
             _tile(
               context,
@@ -103,16 +345,11 @@ class _MobileDrawer extends StatelessWidget {
             ),
             _tile(
               context,
-              '/labs',
-              context.l10n.navLabs,
-              Icons.science_outlined,
-            ),
-            _tile(
-              context,
               '/library',
               context.l10n.navLibrary,
               Icons.menu_book_outlined,
             ),
+            _tile(context, '/people', 'People', Icons.people_outlined),
             if (showMeta)
               _tile(
                 context,
@@ -120,13 +357,33 @@ class _MobileDrawer extends StatelessWidget {
                 context.l10n.navMeta,
                 Icons.account_tree_outlined,
               ),
+            const Divider(height: 8),
+            // About group
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16.0,
+                vertical: 4,
+              ),
+              child: Text(
+                'About',
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+            ),
+            _tile(context, '/pages/about', 'About', Icons.info_outline),
             _tile(
               context,
               '/foundation',
               context.l10n.navFoundation,
-              Icons.info_outline,
+              Icons.layers_outlined,
             ),
+            _tile(context, '/pages/credits', 'Credits', Icons.star_outline),
             const Divider(height: 16),
+            _tile(
+              context,
+              '/timeline',
+              context.l10n.navTimeline,
+              Icons.timeline,
+            ),
             _tile(
               context,
               '/services',

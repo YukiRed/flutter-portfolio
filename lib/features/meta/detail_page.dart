@@ -6,6 +6,7 @@ import '../../widgets/lock_banner.dart';
 import '../../core/services/auth_service.dart';
 import '../../core/services/crypto_service.dart';
 import '../../core/utils/responsive.dart';
+import '../../widgets/detail_header.dart';
 
 class MetaDetailPage extends StatelessWidget {
   final String slug;
@@ -42,7 +43,13 @@ class MetaDetailPage extends StatelessWidget {
                 }
                 return SingleChildScrollView(
                   padding: EdgeInsets.all(context.pagePadding),
-                  child: MarkdownView(data: dec.data!),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      DetailHeader(meta: meta),
+                      MarkdownView(data: dec.data!),
+                    ],
+                  ),
                 );
               },
             );

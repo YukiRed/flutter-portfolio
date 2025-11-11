@@ -5,10 +5,8 @@ import '../features/home/home_page.dart';
 import '../features/pages/page_viewer.dart';
 import '../features/blog/index_page.dart';
 import '../features/blog/detail_page.dart';
-import '../features/projects/index_page.dart';
-import '../features/projects/detail_page.dart';
-import '../features/labs/index_page.dart';
-import '../features/labs/detail_page.dart';
+import '../features/projects/detail_page.dart' as projects_detail;
+import '../features/labs/detail_page.dart' as labs_detail;
 import '../features/library/index_page.dart';
 import '../features/library/detail_page.dart';
 import '../features/meta/index_page.dart';
@@ -20,6 +18,9 @@ import '../features/contact/contact_page.dart';
 import '../features/resume/resume_page.dart';
 import '../features/auth/login_page.dart';
 import '../features/not_found/not_found_page.dart';
+import '../features/work/index_page.dart';
+import '../features/timeline/index_page.dart';
+import '../features/timeline/detail_page.dart';
 
 GoRouter buildRouter(ContentService content) {
   return GoRouter(
@@ -57,25 +58,37 @@ GoRouter buildRouter(ContentService content) {
           ),
 
           GoRoute(
+            path: '/work',
+            name: 'work',
+            builder: (context, state) {
+              final f = switch (state.uri.queryParameters['f']) {
+                'projects' => WorkFilter.projects,
+                'labs' => WorkFilter.labs,
+                _ => WorkFilter.all,
+              };
+              return WorkIndexPage(initial: f);
+            },
+          ),
+
+          GoRoute(
             path: '/projects',
-            builder: (context, state) => const ProjectsIndexPage(),
+            redirect: (context, state) => '/work?f=projects',
           ),
           GoRoute(
             path: '/projects/:slug',
-            builder: (context, state) =>
-                ProjectDetailPage(slug: state.pathParameters['slug']!),
+            name: 'projectDetail',
+            builder: (context, state) => projects_detail.ProjectDetailPage(
+              slug: state.pathParameters['slug']!,
+            ),
           ),
 
-          GoRoute(
-            path: '/labs',
-            builder: (context, state) => const LabsIndexPage(),
-          ),
+          GoRoute(path: '/labs', redirect: (context, state) => '/work?f=labs'),
           GoRoute(
             path: '/labs/:slug',
+            name: 'labDetail',
             builder: (context, state) =>
-                LabDetailPage(slug: state.pathParameters['slug']!),
+                labs_detail.LabDetailPage(slug: state.pathParameters['slug']!),
           ),
-
           GoRoute(
             path: '/library',
             builder: (context, state) => const LibraryIndexPage(),
@@ -104,6 +117,17 @@ GoRouter buildRouter(ContentService content) {
             path: '/foundation/:slug',
             builder: (context, state) =>
                 FoundationDetailPage(slug: state.pathParameters['slug']!),
+          ),
+
+          // Timeline routes must be declared before the generic pages route
+          GoRoute(
+            path: '/timeline',
+            builder: (context, state) => const TimelineIndexPage(),
+          ),
+          GoRoute(
+            path: '/timeline/:slug',
+            builder: (context, state) =>
+                TimelineDetailPage(slug: state.pathParameters['slug']!),
           ),
 
           // Generic “page” content if you add more slugs later

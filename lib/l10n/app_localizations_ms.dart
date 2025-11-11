@@ -33,6 +33,9 @@ class AppLocalizationsMs extends AppLocalizations {
   String get navFoundation => 'Asas';
 
   @override
+  String get navTimeline => 'Garis Masa';
+
+  @override
   String get navServices => 'Perkhidmatan';
 
   @override

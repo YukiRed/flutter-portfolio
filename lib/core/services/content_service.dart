@@ -12,11 +12,27 @@ class ContentService extends ChangeNotifier {
   Future<void> ensureLoaded() async {
     if (_loaded) return;
     final paths = await listMarkdownAssets();
+    // Debug: print discovered asset paths when running in debug mode
+    if (kDebugMode) {
+      // ignore: avoid_print
+      print('[ContentService] discovered ${paths.length} markdown assets');
+      for (final p in paths) {
+        // ignore: avoid_print
+        print('[ContentService] asset: $p');
+      }
+    }
     for (final path in paths) {
       final raw = await rootBundle.loadString(path);
       final fm = parseFrontMatter(raw);
       if (fm.meta.isEmpty) continue;
-      _all.add(_toMeta(fm.meta, path));
+      final meta = _toMeta(fm.meta, path);
+      if (kDebugMode) {
+        // ignore: avoid_print
+        print(
+          '[ContentService] parsed: type=${meta.type} slug=${meta.slug} visibility=${meta.visibility} path=${meta.path}',
+        );
+      }
+      _all.add(meta);
     }
     _loaded = true;
     notifyListeners();

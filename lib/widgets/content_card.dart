@@ -24,6 +24,7 @@ class ContentCard extends StatelessWidget {
     final bool isPrivate = metaIsPrivate(meta);
     final String routeBase = switch (type) {
       'blog' => '/blog',
+      'timeline' => '/timeline',
       'project' => '/projects',
       'lab' => '/labs',
       'library' => '/library',

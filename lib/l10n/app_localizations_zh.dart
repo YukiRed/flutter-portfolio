@@ -33,6 +33,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get navFoundation => '基础';
 
   @override
+  String get navTimeline => '时间线';
+
+  @override
   String get navServices => '服务';
 
   @override

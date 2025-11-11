@@ -148,6 +148,12 @@ abstract class AppLocalizations {
   /// **'Foundation'**
   String get navFoundation;
 
+  /// No description provided for @navTimeline.
+  ///
+  /// In en, this message translates to:
+  /// **'Timeline'**
+  String get navTimeline;
+
   /// No description provided for @navServices.
   ///
   /// In en, this message translates to:
