@@ -25,6 +25,7 @@ class ContentCard extends StatelessWidget {
     final String routeBase = switch (type) {
       'blog' => '/blog',
       'timeline' => '/timeline',
+      'people' => '/people',
       'project' => '/projects',
       'lab' => '/labs',
       'library' => '/library',

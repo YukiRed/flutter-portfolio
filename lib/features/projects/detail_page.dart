@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../core/services/content_service.dart';
 import '../../core/markdown/markdown_renderer.dart';
 import '../../widgets/lock_banner.dart';
+import '../../widgets/detail_header.dart';
 import '../../core/services/auth_service.dart';
 import '../../core/services/crypto_service.dart';
 import '../../core/utils/responsive.dart';
@@ -42,7 +43,13 @@ class ProjectDetailPage extends StatelessWidget {
                 }
                 return SingleChildScrollView(
                   padding: EdgeInsets.all(context.pagePadding),
-                  child: MarkdownView(data: dec.data!),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      DetailHeader(meta: meta),
+                      MarkdownView(data: dec.data!),
+                    ],
+                  ),
                 );
               },
             );

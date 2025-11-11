@@ -21,6 +21,8 @@ import '../features/not_found/not_found_page.dart';
 import '../features/work/index_page.dart';
 import '../features/timeline/index_page.dart';
 import '../features/timeline/detail_page.dart';
+import '../features/people/index_page.dart';
+import '../features/people/detail_page.dart';
 
 GoRouter buildRouter(ContentService content) {
   return GoRouter(
@@ -128,6 +130,17 @@ GoRouter buildRouter(ContentService content) {
             path: '/timeline/:slug',
             builder: (context, state) =>
                 TimelineDetailPage(slug: state.pathParameters['slug']!),
+          ),
+
+          GoRoute(
+            path: '/people',
+            builder: (context, state) => const PeopleIndexPage(),
+          ),
+
+          GoRoute(
+            path: '/people/:slug',
+            builder: (context, state) =>
+                PersonDetailPage(slug: state.pathParameters['slug']!),
           ),
 
           // Generic “page” content if you add more slugs later

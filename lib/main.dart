@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_plugins/flutter_web_plugins.dart'
-    show setUrlStrategy, HashUrlStrategy;
+import 'src/url_strategy_stub.dart'
+    if (dart.library.html) 'src/url_strategy_web.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'app/app.dart';
 
@@ -12,8 +12,8 @@ Future<void> main() async {
     await dotenv.load(fileName: '.env', isOptional: true, mergeWith: const {});
   } catch (_) {}
 
-  // GitHub Pages: hash routing to avoid server rewrites
-  setUrlStrategy(const HashUrlStrategy());
+  // GitHub Pages: hash routing to avoid server rewrites (no-op on non-web)
+  setHashUrlStrategy();
 
   runApp(const PortfolioApp());
 }

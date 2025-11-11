@@ -121,6 +121,7 @@ flutter:
     - assets/contents/meta/
     - assets/contents/foundation/
     - assets/contents/timeline/
+    - assets/contents/people/
     - assets/images/
     - assets/images/brand/
     - assets/images/headshots/

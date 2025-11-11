@@ -17,6 +17,7 @@ class DetailHeader extends StatelessWidget {
       final t = (meta.type as String?) ?? '';
       return switch (t) {
         'timeline' => '/timeline',
+        'people' => '/people',
         'project' => '/projects',
         'lab' => '/labs',
         'library' => '/library',
