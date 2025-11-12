@@ -129,6 +129,12 @@ flutter:
     - assets/images/diagrams/
     - assets/files/
 
+    # assets:
+    #   - .env.development
+    #   - .env.staging
+    #   - .env.production
+    - .env
+
     # An image asset can refer to one or more resolution-specific "variants", see
     # https://flutter.dev/to/resolution-aware-images
 
@@ -155,8 +161,136 @@ flutter:
     # For details regarding fonts from package dependencies,
     # see https://flutter.dev/to/font-from-package
 
-    # assets:
-    #   - .env.development
-    #   - .env.staging
-    #   - .env.production
-    - .env
+  fonts:
+    - family: NotoSans
+      fonts:
+        - asset: assets/fonts/NotoSans/NotoSans-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/NotoSans/NotoSans-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/NotoSans/NotoSans-Light.ttf
+          weight: 300
+        - asset: assets/fonts/NotoSans/NotoSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/NotoSans/NotoSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/NotoSans/NotoSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/NotoSans/NotoSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/NotoSans/NotoSans-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/NotoSans/NotoSans-Black.ttf
+          weight: 900
+        - asset: assets/fonts/NotoSans/NotoSans-Italic.ttf
+          style: italic
+        - asset: assets/fonts/NotoSans/NotoSans-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/NotoSans/NotoSans-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/NotoSans/NotoSans-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/NotoSans/NotoSans-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/NotoSans/NotoSans-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/NotoSans/NotoSans-BlackItalic.ttf
+          weight: 900
+          style: italic
+
+    - family: NotoSansSC   # Simplified Chinese (Han)
+      fonts:
+        - asset: assets/fonts/NotoSansSC/NotoSansSC-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/NotoSansSC/NotoSansSC-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/NotoSansSC/NotoSansSC-Light.ttf
+          weight: 300
+        - asset: assets/fonts/NotoSansSC/NotoSansSC-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/NotoSansSC/NotoSansSC-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/NotoSansSC/NotoSansSC-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/NotoSansSC/NotoSansSC-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/NotoSansSC/NotoSansSC-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/NotoSansSC/NotoSansSC-Black.ttf
+          weight: 900
+
+    - family: NotoSerifSC  # for headings / classical tone (bazi/taoism)
+      fonts:
+        - asset: assets/fonts/NotoSerifSC/NotoSerifSC-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/NotoSerifSC/NotoSerifSC-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/NotoSerifSC/NotoSerifSC-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/NotoSerifSC/NotoSerifSC-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/NotoSerifSC/NotoSerifSC-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/NotoSerifSC/NotoSerifSC-Black.ttf
+          weight: 900
+        - asset: assets/fonts/NotoSerifSC/NotoSerifSC-Light.ttf
+          weight: 300
+        - asset: assets/fonts/NotoSerifSC/NotoSerifSC-ExtraLight.ttf
+          weight: 200
+
+    - family: NotoSansSymbols2
+      fonts:
+        - asset: assets/fonts/NotoSansSymbols2/NotoSansSymbols2-Regular.ttf
+          weight: 400
+
+    - family: NotoColorEmoji   # emoji fallback
+      fonts:
+        - asset: assets/fonts/NotoColorEmoji/NotoColorEmoji-Regular.ttf
+
+    - family: JetBrainsMono     # code blocks / monospace
+      fonts:
+        - asset: assets/fonts/JetBrainsMono/JetBrainsMono-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/JetBrainsMono/JetBrainsMono-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/JetBrainsMono/JetBrainsMono-Light.ttf
+          weight: 300
+        - asset: assets/fonts/JetBrainsMono/JetBrainsMono-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/JetBrainsMono/JetBrainsMono-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/JetBrainsMono/JetBrainsMono-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/JetBrainsMono/JetBrainsMono-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/JetBrainsMono/JetBrainsMono-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/JetBrainsMono/JetBrainsMono-ThinItalic.ttf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/JetBrainsMono/JetBrainsMono-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/JetBrainsMono/JetBrainsMono-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/JetBrainsMono/JetBrainsMono-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/JetBrainsMono/JetBrainsMono-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/JetBrainsMono/JetBrainsMono-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/JetBrainsMono/JetBrainsMono-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/JetBrainsMono/JetBrainsMono-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic

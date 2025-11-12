@@ -142,7 +142,7 @@ class _WorkGrid extends StatelessWidget {
         crossAxisCount: cross,
         crossAxisSpacing: 16,
         mainAxisSpacing: 16,
-        childAspectRatio: width >= 1200 ? 1.6 : 1.3,
+        childAspectRatio: width >= 1200 ? 5 : 7,
       ),
       itemBuilder: (context, i) => ContentCard(meta: items[i]),
     );

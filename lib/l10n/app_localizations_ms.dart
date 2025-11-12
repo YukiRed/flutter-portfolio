@@ -27,7 +27,10 @@ class AppLocalizationsMs extends AppLocalizations {
   String get navLibrary => 'Perpustakaan';
 
   @override
-  String get navMeta => 'Meta';
+  String get navDiscover => 'Teroka';
+
+  @override
+  String get navPhilosophy => 'Falsafah';
 
   @override
   String get navFoundation => 'Asas';

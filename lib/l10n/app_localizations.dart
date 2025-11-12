@@ -136,11 +136,17 @@ abstract class AppLocalizations {
   /// **'Library'**
   String get navLibrary;
 
-  /// No description provided for @navMeta.
+  /// No description provided for @navDiscover.
   ///
   /// In en, this message translates to:
-  /// **'Meta'**
-  String get navMeta;
+  /// **'Discover'**
+  String get navDiscover;
+
+  /// No description provided for @navPhilosophy.
+  ///
+  /// In en, this message translates to:
+  /// **'Philosophy'**
+  String get navPhilosophy;
 
   /// No description provided for @navFoundation.
   ///

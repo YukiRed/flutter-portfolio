@@ -27,7 +27,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get navLibrary => 'Library';
 
   @override
-  String get navMeta => 'Meta';
+  String get navDiscover => 'Discover';
+
+  @override
+  String get navPhilosophy => 'Philosophy';
 
   @override
   String get navFoundation => 'Foundation';

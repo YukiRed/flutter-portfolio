@@ -27,7 +27,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get navLibrary => '资料库';
 
   @override
-  String get navMeta => '元信息';
+  String get navDiscover => '发现';
+
+  @override
+  String get navPhilosophy => '理念';
 
   @override
   String get navFoundation => '基础';

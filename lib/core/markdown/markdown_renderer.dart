@@ -22,7 +22,6 @@ class MarkdownView extends StatelessWidget {
             constraints: BoxConstraints(maxWidth: maxW, minWidth: 1.0),
             child: Markdown(
               shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
               data: data,
               selectable: true,
               softLineBreak: true,
@@ -56,7 +55,13 @@ class MarkdownView extends StatelessWidget {
               },
               styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context))
                   .copyWith(
-                    textScaler: const TextScaler.linear(1.05),
+                    textScaler: const TextScaler.linear(1.10), // was 1.05
+                    h1: Theme.of(context).textTheme.headlineLarge,
+                    h2: Theme.of(context).textTheme.headlineMedium,
+                    h3: Theme.of(context).textTheme.headlineSmall,
+                    p: Theme.of(
+                      context,
+                    ).textTheme.bodyLarge, // larger base paragraph
                     h1Padding: const EdgeInsets.only(top: 20, bottom: 8),
                     h2Padding: const EdgeInsets.only(top: 16, bottom: 8),
                     h3Padding: const EdgeInsets.only(top: 12, bottom: 6),
