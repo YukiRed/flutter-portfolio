@@ -23,6 +23,8 @@ import '../features/timeline/index_page.dart';
 import '../features/timeline/detail_page.dart';
 import '../features/people/index_page.dart';
 import '../features/people/detail_page.dart';
+import '../features/products/index_page.dart';
+import '../features/products/detail_page.dart';
 
 GoRouter buildRouter(ContentService content) {
   return GoRouter(
@@ -66,6 +68,7 @@ GoRouter buildRouter(ContentService content) {
               final f = switch (state.uri.queryParameters['f']) {
                 'projects' => WorkFilter.projects,
                 'labs' => WorkFilter.labs,
+                'products' => WorkFilter.products,
                 _ => WorkFilter.all,
               };
               return WorkIndexPage(initial: f);
@@ -91,6 +94,21 @@ GoRouter buildRouter(ContentService content) {
             builder: (context, state) =>
                 labs_detail.LabDetailPage(slug: state.pathParameters['slug']!),
           ),
+
+          GoRoute(
+            path: '/products',
+            name: 'products-index',
+            builder: (context, state) => const ProductsIndexPage(),
+            routes: [
+              GoRoute(
+                path: ':slug',
+                name: 'product-detail',
+                builder: (context, state) =>
+                    ProductDetailPage(slug: state.pathParameters['slug']!),
+              ),
+            ],
+          ),
+
           GoRoute(
             path: '/library',
             builder: (context, state) => const LibraryIndexPage(),

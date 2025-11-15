@@ -66,5 +66,10 @@
   "workFilterAll": "All",
   "workFilterProjects": "Projects",
   "workFilterLabs": "Labs",
-  "workEmpty": "No items yet."
+  "workEmpty": "No items yet.",
+
+  "workFilterProducts": "Products",
+  "workProductsSectionTitle": "Products & Templates",
+  "workProductsSectionSubtitle": "Reusable tools, starter kits, and templates you can adopt in your own systems."
+
 }

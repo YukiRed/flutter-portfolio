@@ -190,4 +190,14 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get workEmpty => 'No items yet.';
+
+  @override
+  String get workFilterProducts => 'Products';
+
+  @override
+  String get workProductsSectionTitle => 'Products & Templates';
+
+  @override
+  String get workProductsSectionSubtitle =>
+      'Reusable tools, starter kits, and templates you can adopt in your own systems.';
 }

@@ -192,4 +192,14 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get workEmpty => 'Belum ada item.';
+
+  @override
+  String get workFilterProducts => 'Produk';
+
+  @override
+  String get workProductsSectionTitle => 'Produk & Templat';
+
+  @override
+  String get workProductsSectionSubtitle =>
+      'Alat boleh guna semula, kit permulaan dan templat untuk sistem anda.';
 }

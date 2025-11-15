@@ -61,6 +61,11 @@ class Shell extends StatelessWidget {
                       icon: Icons.science_outlined,
                       label: context.l10n.navLabs,
                     ),
+                    MenuEntry(
+                      value: 'products',
+                      icon: Icons.widgets_outlined,
+                      label: context.l10n.workFilterProducts,
+                    ),
                   ],
                   onSelected: (v) {
                     if (v == 'all') {
@@ -234,6 +239,12 @@ class _MobileDrawer extends StatelessWidget {
               '/work?f=labs',
               context.l10n.navLabs,
               Icons.science_outlined,
+            ),
+            _tile(
+              context,
+              '/work?f=products',
+              context.l10n.workFilterProducts,
+              Icons.widgets_outlined,
             ),
 
             const Divider(height: 16),

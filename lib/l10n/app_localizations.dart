@@ -459,6 +459,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No items yet.'**
   String get workEmpty;
+
+  /// No description provided for @workFilterProducts.
+  ///
+  /// In en, this message translates to:
+  /// **'Products'**
+  String get workFilterProducts;
+
+  /// No description provided for @workProductsSectionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Products & Templates'**
+  String get workProductsSectionTitle;
+
+  /// No description provided for @workProductsSectionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reusable tools, starter kits, and templates you can adopt in your own systems.'**
+  String get workProductsSectionSubtitle;
 }
 
 class _AppLocalizationsDelegate

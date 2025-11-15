@@ -88,6 +88,8 @@ class DetailHeader extends StatelessWidget {
         return '/meta';
       case 'foundation':
         return '/foundation';
+      case 'product':
+        return '/products';
       case 'page':
       default:
         // Pages don’t have a “section index”. For common pages, treat Home as the parent.

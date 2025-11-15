@@ -65,6 +65,11 @@
   "workFilterAll": "Semua",
   "workFilterProjects": "Projek",
   "workFilterLabs": "Makmal",
-  "workEmpty": "Belum ada item."
+  "workEmpty": "Belum ada item.",
+
+  "workFilterProducts": "Produk",
+  "workProductsSectionTitle": "Produk & Templat",
+  "workProductsSectionSubtitle": "Alat boleh guna semula, kit permulaan dan templat untuk sistem anda."
+
 
 }

@@ -187,4 +187,13 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get workEmpty => '目前还没有条目。';
+
+  @override
+  String get workFilterProducts => '产品';
+
+  @override
+  String get workProductsSectionTitle => '产品与模板';
+
+  @override
+  String get workProductsSectionSubtitle => '可复用的工具、起步套件和模板，方便你在自己的系统中采用。';
 }

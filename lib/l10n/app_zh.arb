@@ -65,6 +65,11 @@
   "workFilterAll": "全部",
   "workFilterProjects": "项目",
   "workFilterLabs": "实验室",
-  "workEmpty": "目前还没有条目。"
+  "workEmpty": "目前还没有条目。",
+
+  "workFilterProducts": "产品",
+  "workProductsSectionTitle": "产品与模板",
+  "workProductsSectionSubtitle": "可复用的工具、起步套件和模板，方便你在自己的系统中采用。"
+
 }
 

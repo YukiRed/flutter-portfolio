@@ -7,7 +7,7 @@ import '../../widgets/content_card.dart';
 import '../../widgets/section_header.dart';
 import '../../core/utils/l10n.dart';
 
-enum WorkFilter { all, projects, labs }
+enum WorkFilter { all, projects, labs, products }
 
 class WorkIndexPage extends StatefulWidget {
   final WorkFilter initial;
@@ -29,21 +29,34 @@ class _WorkIndexPageState extends State<WorkIndexPage> {
     _load();
   }
 
+  @override
+  void didUpdateWidget(covariant WorkIndexPage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // When /work?f=... changes, GoRouter rebuilds with a new `initial`.
+    // Sync the internal filter + reload items.
+    if (oldWidget.initial != widget.initial) {
+      _filter = widget.initial;
+      _load();
+    }
+  }
+
   Future<void> _load() async {
     setState(() => _loading = true);
     final svc = context.read<ContentService>();
 
-    // Pull both sections, then filter in-memory (cheap; avoids over-coupling).
+    // Pull all work types, then filter in-memory (cheap; avoids over-coupling).
     final projects = svc.listByType('project');
     final labs = svc.listByType('lab');
+    final products = svc.listByType('product');
 
-    final all = <ContentMeta>[...projects, ...labs]
+    final all = <ContentMeta>[...projects, ...labs, ...products]
       ..sort((a, b) => b.date!.compareTo(a.date!));
 
     setState(() {
       _items = switch (_filter) {
         WorkFilter.projects => projects,
         WorkFilter.labs => labs,
+        WorkFilter.products => products,
         _ => all,
       };
       _loading = false;
@@ -52,18 +65,21 @@ class _WorkIndexPageState extends State<WorkIndexPage> {
 
   void _setFilter(WorkFilter f) {
     setState(() => _filter = f);
-    // Just re-filter; lists already loaded once above. If you prefer fresh load, call _load().
+
+    // Re-filter using already-available content service.
     final svc = context.read<ContentService>();
     final projects = svc.listByType('project');
     final labs = svc.listByType('lab');
+    final products = svc.listByType('product');
 
-    final all = <ContentMeta>[...projects, ...labs]
+    final all = <ContentMeta>[...projects, ...labs, ...products]
       ..sort((a, b) => b.date!.compareTo(a.date!));
 
     setState(() {
       _items = switch (f) {
         WorkFilter.projects => projects,
         WorkFilter.labs => labs,
+        WorkFilter.products => products,
         _ => all,
       };
     });
@@ -128,6 +144,10 @@ class _FilterDropdown extends StatelessWidget {
           value: WorkFilter.labs,
           child: Text(context.l10n.workFilterLabs),
         ),
+        DropdownMenuItem(
+          value: WorkFilter.products,
+          child: Text(context.l10n.workFilterProducts),
+        ),
       ],
     );
   }
@@ -152,7 +172,7 @@ class _WorkGrid extends StatelessWidget {
         crossAxisCount: cross,
         crossAxisSpacing: 16,
         mainAxisSpacing: 16,
-        childAspectRatio: width >= 1200 ? 5 : 7,
+        childAspectRatio: width >= 1200 ? 5 : 4,
       ),
       itemBuilder: (context, i) => ContentCard(meta: items[i]),
     );
