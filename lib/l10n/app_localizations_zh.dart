@@ -99,6 +99,30 @@ class AppLocalizationsZh extends AppLocalizations {
   String get paletteWater => '水';
 
   @override
+  String get paletteYin => '阴';
+
+  @override
+  String get paletteYang => '阳';
+
+  @override
+  String get paletteAbyss => '深渊';
+
+  @override
+  String get paletteLunar => '月影';
+
+  @override
+  String get paletteStorm => '风暴';
+
+  @override
+  String get paletteNatural => '自然';
+
+  @override
+  String get paletteMinimal => '极简';
+
+  @override
+  String get paletteMono => '单色';
+
+  @override
   String get menuLanguage => '语言';
 
   @override

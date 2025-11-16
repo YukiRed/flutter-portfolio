@@ -127,6 +127,24 @@
     "description": "Name of the 'water' color palette."
   },
 
+  "paletteYin": "Yin",
+  "@paletteYin": { "description": "Name of the 'yin' color palette." },
+  "paletteYang": "Yang",
+  "@paletteYang": { "description": "Name of the 'yang' color palette." },
+  "paletteAbyss": "Abyss",
+  "@paletteAbyss": { "description": "Name of the 'abyss' color palette." },
+  "paletteLunar": "Lunar",
+  "@paletteLunar": { "description": "Name of the 'lunar' color palette." },
+  "paletteStorm": "Storm",
+  "@paletteStorm": { "description": "Name of the 'storm' color palette." },
+  "paletteNatural": "Natural",
+  "@paletteNatural": { "description": "Name of the 'natural' color palette." },
+  "paletteMinimal": "Minimal",
+  "@paletteMinimal": { "description": "Name of the 'minimal' color palette." },
+  "paletteMono": "Monochrome",
+  "@paletteMono": { "description": "Name of the 'monochrome' color palette." },
+
+
   "menuLanguage": "Language",
   "@menuLanguage": {
     "description": "Tooltip/title for the language selection popup."

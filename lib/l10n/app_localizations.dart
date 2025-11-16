@@ -280,6 +280,54 @@ abstract class AppLocalizations {
   /// **'Water'**
   String get paletteWater;
 
+  /// Name of the 'yin' color palette.
+  ///
+  /// In en, this message translates to:
+  /// **'Yin'**
+  String get paletteYin;
+
+  /// Name of the 'yang' color palette.
+  ///
+  /// In en, this message translates to:
+  /// **'Yang'**
+  String get paletteYang;
+
+  /// Name of the 'abyss' color palette.
+  ///
+  /// In en, this message translates to:
+  /// **'Abyss'**
+  String get paletteAbyss;
+
+  /// Name of the 'lunar' color palette.
+  ///
+  /// In en, this message translates to:
+  /// **'Lunar'**
+  String get paletteLunar;
+
+  /// Name of the 'storm' color palette.
+  ///
+  /// In en, this message translates to:
+  /// **'Storm'**
+  String get paletteStorm;
+
+  /// Name of the 'natural' color palette.
+  ///
+  /// In en, this message translates to:
+  /// **'Natural'**
+  String get paletteNatural;
+
+  /// Name of the 'minimal' color palette.
+  ///
+  /// In en, this message translates to:
+  /// **'Minimal'**
+  String get paletteMinimal;
+
+  /// Name of the 'monochrome' color palette.
+  ///
+  /// In en, this message translates to:
+  /// **'Monochrome'**
+  String get paletteMono;
+
   /// Tooltip/title for the language selection popup.
   ///
   /// In en, this message translates to:

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../app/theme.dart';
+import '../app/theme_controller.dart';
 
 class SectionHeader extends StatelessWidget {
   final String title;
@@ -30,6 +33,8 @@ class SectionHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final text = theme.textTheme;
+    final palette = context.watch<ThemeController>().palette;
+    final defaultDividerColor = accentStrongFor(palette);
 
     // Title: same hierarchy level used in Meta / Foundation
     final TextStyle titleStyle = text.headlineMedium!.copyWith(
@@ -93,7 +98,7 @@ class SectionHeader extends StatelessWidget {
             width: dividerWidth,
             height: 3,
             decoration: BoxDecoration(
-              color: dividerColor ?? theme.colorScheme.primary,
+              color: dividerColor ?? defaultDividerColor,
               borderRadius: BorderRadius.circular(2),
             ),
           ),

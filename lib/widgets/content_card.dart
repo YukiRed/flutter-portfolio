@@ -5,6 +5,9 @@ import 'package:intl/intl.dart';
 import '../core/utils/responsive.dart';
 import '../core/utils/visibility.dart';
 import 'visibility_badge.dart';
+import '../app/theme.dart';
+import '../app/theme_controller.dart';
+import 'package:provider/provider.dart';
 
 /// Assumes your meta model exposes:
 /// - title, slug, type, date, summary, thumbnail
@@ -24,6 +27,31 @@ class ContentCard extends StatelessWidget {
     final DateTime? date = meta.date is DateTime ? meta.date as DateTime : null;
     final bool isPrivate = metaIsPrivate(meta);
 
+    final palette = context.watch<ThemeController>().palette;
+    final strongAccent = accentStrongFor(palette);
+    final softAccent = accentSoftFor(palette);
+
+    // Actual card background
+    final Color cardBg = softAccent.withValues(alpha: 0.6);
+
+    // Decide text colors based on background luminance
+    final bool isDarkBg = cardBg.computeLuminance() < 0.5;
+
+    final theme = Theme.of(context);
+
+    final titleStyle = theme.textTheme.titleMedium?.copyWith(
+      color: isDarkBg
+          ? Colors.white
+          : theme.textTheme.titleMedium?.color ?? theme.colorScheme.onSurface,
+    );
+
+    final subtitleStyle = theme.textTheme.bodySmall?.copyWith(
+      color: isDarkBg
+          ? Colors.white.withValues(alpha: 0.78)
+          : theme.textTheme.bodySmall?.color ??
+                theme.colorScheme.onSurface.withValues(alpha: 0.78),
+    );
+
     final subtitlePieces = <String>[
       if (date != null) _formatDateLocalized(context, date),
       if (summary != null && summary.isNotEmpty) summary,
@@ -32,6 +60,11 @@ class ContentCard extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 8),
       clipBehavior: Clip.antiAlias,
+      color: cardBg,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+        side: BorderSide(color: strongAccent.withValues(alpha: 0.25), width: 1),
+      ),
       child: InkWell(
         onTap: () => context.go(_detailRouteFor(type, slug)),
         child: Padding(
@@ -60,7 +93,7 @@ class ContentCard extends StatelessWidget {
                             title,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
-                            style: Theme.of(context).textTheme.titleMedium,
+                            style: titleStyle,
                           ),
                         ),
                         const SizedBox(width: 8),
@@ -73,7 +106,7 @@ class ContentCard extends StatelessWidget {
                         subtitlePieces.join('  •  '),
                         maxLines: dense ? 2 : 3,
                         overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.bodySmall,
+                        style: subtitleStyle,
                       ),
                     ],
                   ],
@@ -142,7 +175,7 @@ class _Thumb extends StatelessWidget {
     final double size = 56;
 
     if (t == null || t.isEmpty) {
-      return _placeholder(size);
+      return _placeholder(context, size);
     }
 
     final path = t.startsWith('/assets/') ? t.substring(1) : t;
@@ -153,20 +186,27 @@ class _Thumb extends StatelessWidget {
         width: size,
         height: size,
         fit: BoxFit.cover,
-        errorBuilder: (context, error, stack) => _placeholder(size),
+        errorBuilder: (context, error, stack) => _placeholder(context, size),
       ),
     );
   }
 
-  Widget _placeholder(double size) {
+  Widget _placeholder(BuildContext context, double size) {
+    final palette = context.watch<ThemeController>().palette;
+    final bg = accentSoftFor(palette);
+
+    final bool isDarkBg = bg.computeLuminance() < 0.5;
+    final Color fg = isDarkBg ? Colors.white : accentStrongFor(palette);
+
     return Container(
       width: size,
       height: size,
       decoration: BoxDecoration(
-        color: Colors.black.withValues(alpha: 0.04),
+        color: bg,
         borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: fg.withValues(alpha: 0.5), width: 1),
       ),
-      child: const Icon(Icons.insert_drive_file_outlined, size: 20),
+      child: Icon(Icons.insert_drive_file_outlined, size: 20, color: fg),
     );
   }
 }

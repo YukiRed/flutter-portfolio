@@ -1,7 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-enum AppPalette { metal, earth, wood, fire, water }
+enum AppPalette {
+  metal,
+  earth,
+  wood,
+  fire,
+  water,
+  yin,
+  yang,
+  abyss,
+  lunar,
+  storm,
+  natural,
+  minimal,
+  mono,
+}
 
 class ThemeController extends ChangeNotifier {
   static const _kModeKey = 'theme.mode';
@@ -38,9 +52,34 @@ class ThemeController extends ChangeNotifier {
       case 'water':
         _palette = AppPalette.water;
         break;
+      case 'yin':
+        _palette = AppPalette.yin;
+        break;
+      case 'yang':
+        _palette = AppPalette.yang;
+        break;
+      case 'abyss':
+        _palette = AppPalette.abyss;
+        break;
+      case 'lunar':
+        _palette = AppPalette.lunar;
+        break;
+      case 'storm':
+        _palette = AppPalette.storm;
+        break;
+      case 'natural':
+        _palette = AppPalette.natural;
+        break;
+      case 'minimal':
+        _palette = AppPalette.minimal;
+        break;
+      case 'mono':
+        _palette = AppPalette.mono;
+        break;
       default:
         _palette = AppPalette.metal;
     }
+
     notifyListeners();
   }
 
@@ -63,8 +102,17 @@ class ThemeController extends ChangeNotifier {
       AppPalette.wood => 'wood',
       AppPalette.fire => 'fire',
       AppPalette.water => 'water',
+      AppPalette.yin => 'yin',
+      AppPalette.yang => 'yang',
+      AppPalette.abyss => 'abyss',
+      AppPalette.lunar => 'lunar',
+      AppPalette.storm => 'storm',
+      AppPalette.natural => 'natural',
+      AppPalette.minimal => 'minimal',
+      AppPalette.mono => 'mono',
       _ => 'metal',
     });
+
     notifyListeners();
   }
 }

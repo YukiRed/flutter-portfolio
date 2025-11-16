@@ -99,6 +99,30 @@ class AppLocalizationsEn extends AppLocalizations {
   String get paletteWater => 'Water';
 
   @override
+  String get paletteYin => 'Yin';
+
+  @override
+  String get paletteYang => 'Yang';
+
+  @override
+  String get paletteAbyss => 'Abyss';
+
+  @override
+  String get paletteLunar => 'Lunar';
+
+  @override
+  String get paletteStorm => 'Storm';
+
+  @override
+  String get paletteNatural => 'Natural';
+
+  @override
+  String get paletteMinimal => 'Minimal';
+
+  @override
+  String get paletteMono => 'Monochrome';
+
+  @override
   String get menuLanguage => 'Language';
 
   @override

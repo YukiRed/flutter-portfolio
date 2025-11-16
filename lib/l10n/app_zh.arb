@@ -126,6 +126,24 @@
     "description": "Name of the 'water' color palette."
   },
 
+  "paletteYin": "阴",
+  "@paletteYin": { "description": "“阴”配色方案名称。" },
+  "paletteYang": "阳",
+  "@paletteYang": { "description": "“阳”配色方案名称。" },
+  "paletteAbyss": "深渊",
+  "@paletteAbyss": { "description": "“深渊”配色方案名称。" },
+  "paletteLunar": "月影",
+  "@paletteLunar": { "description": "“月影”配色方案名称。" },
+  "paletteStorm": "风暴",
+  "@paletteStorm": { "description": "“风暴”配色方案名称。" },
+  "paletteNatural": "自然",
+  "@paletteNatural": { "description": "“自然”配色方案名称。" },
+  "paletteMinimal": "极简",
+  "@paletteMinimal": { "description": "“极简”配色方案名称。" },
+  "paletteMono": "单色",
+  "@paletteMono": { "description": "“单色”配色方案名称。" },
+
+
   "menuLanguage": "语言",
   "@menuLanguage": {
     "description": "Tooltip/title for the language selection popup."

@@ -2,8 +2,10 @@ import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import '../../core/utils/l10n.dart';
 
+import '../../core/utils/l10n.dart';
+import '../../app/theme.dart';
+import '../../app/theme_controller.dart';
 import '../../core/services/content_service.dart';
 import '../../core/services/auth_service.dart';
 import '../../core/utils/responsive.dart';
@@ -263,19 +265,26 @@ class _DatePill extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
+    final palette = context.watch<ThemeController>().palette;
+    final softAccent = accentSoftFor(palette);
+    final strongAccent = accentStrongFor(palette);
+
+    // Decide text color based on how light/dark the pill background is
+    final bool isLightBg = softAccent.computeLuminance() > 0.5;
+    final Color pillTextColor = isLightBg ? Colors.black87 : Colors.white;
+
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
       decoration: BoxDecoration(
-        color: scheme.secondaryContainer,
+        color: softAccent,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: scheme.outlineVariant),
+        border: Border.all(color: strongAccent.withValues(alpha: 0.6)),
       ),
       child: Text(
         text,
         style: Theme.of(
           context,
-        ).textTheme.labelSmall?.copyWith(color: scheme.onSecondaryContainer),
+        ).textTheme.labelSmall?.copyWith(color: pillTextColor),
       ),
     );
   }

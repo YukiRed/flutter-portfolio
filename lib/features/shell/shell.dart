@@ -416,6 +416,14 @@ class _ThemeButton extends StatelessWidget {
             'wood': AppPalette.wood,
             'fire': AppPalette.fire,
             'water': AppPalette.water,
+            'yin': AppPalette.yin,
+            'yang': AppPalette.yang,
+            'abyss': AppPalette.abyss,
+            'lunar': AppPalette.lunar,
+            'storm': AppPalette.storm,
+            'natural': AppPalette.natural,
+            'minimal': AppPalette.minimal,
+            'mono': AppPalette.mono,
           };
           themeCtrl.setPalette(map[name] ?? AppPalette.metal);
         }
@@ -452,6 +460,38 @@ class _ThemeButton extends StatelessWidget {
         PopupMenuItem(
           value: 'palette:water',
           child: Text(context.l10n.paletteWater),
+        ),
+        PopupMenuItem(
+          value: 'palette:yin',
+          child: Text(context.l10n.paletteYin),
+        ),
+        PopupMenuItem(
+          value: 'palette:yang',
+          child: Text(context.l10n.paletteYang),
+        ),
+        PopupMenuItem(
+          value: 'palette:abyss',
+          child: Text(context.l10n.paletteAbyss),
+        ),
+        PopupMenuItem(
+          value: 'palette:lunar',
+          child: Text(context.l10n.paletteLunar),
+        ),
+        PopupMenuItem(
+          value: 'palette:storm',
+          child: Text(context.l10n.paletteStorm),
+        ),
+        PopupMenuItem(
+          value: 'palette:natural',
+          child: Text(context.l10n.paletteNatural),
+        ),
+        PopupMenuItem(
+          value: 'palette:minimal',
+          child: Text(context.l10n.paletteMinimal),
+        ),
+        PopupMenuItem(
+          value: 'palette:mono',
+          child: Text(context.l10n.paletteMono),
         ),
       ],
     );

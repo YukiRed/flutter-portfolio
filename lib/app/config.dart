@@ -11,7 +11,8 @@ class AppConfig {
   final bool useHashRouter;
   final String basePath;
 
-  final String initialPaletteName; // metal|earth|wood|fire|water
+  // metal|earth|wood|fire|water|yin|yang|abyss|lunar|storm|natural|minimal|mono
+  final String initialPaletteName;
   final String initialModeName; // system|light|dark
 
   const AppConfig({

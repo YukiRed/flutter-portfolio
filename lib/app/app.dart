@@ -127,6 +127,23 @@ AppPalette _parsePalette(String name) {
       return AppPalette.fire;
     case 'water':
       return AppPalette.water;
+    case 'yin':
+      return AppPalette.yin;
+    case 'yang':
+      return AppPalette.yang;
+    case 'abyss':
+      return AppPalette.abyss;
+    case 'lunar':
+      return AppPalette.lunar;
+    case 'storm':
+      return AppPalette.storm;
+    case 'natural':
+      return AppPalette.natural;
+    case 'minimal':
+      return AppPalette.minimal;
+    case 'mono':
+    case 'monochrome':
+      return AppPalette.mono;
     case 'metal':
     default:
       return AppPalette.metal;

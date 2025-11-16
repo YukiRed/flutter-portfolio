@@ -15,7 +15,8 @@ class VisibilityBadge extends StatelessWidget {
     // 🚫 Not logged in → hide completely
     if (!auth.isLoggedIn) return const SizedBox.shrink();
 
-    final baseColor = isPrivate ? Colors.red : Colors.green;
+    final scheme = Theme.of(context).colorScheme;
+    final baseColor = isPrivate ? scheme.error : scheme.tertiary;
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),

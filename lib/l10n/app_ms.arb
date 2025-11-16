@@ -126,6 +126,24 @@
     "description": "Name of the 'water' color palette."
   },
 
+  "paletteYin": "Yin",
+  "@paletteYin": { "description": "Nama palet 'yin'." },
+  "paletteYang": "Yang",
+  "@paletteYang": { "description": "Nama palet 'yang'." },
+  "paletteAbyss": "Abyss",
+  "@paletteAbyss": { "description": "Nama palet 'abyss'." },
+  "paletteLunar": "Lunar",
+  "@paletteLunar": { "description": "Nama palet 'lunar'." },
+  "paletteStorm": "Ribut",
+  "@paletteStorm": { "description": "Nama palet 'storm'." },
+  "paletteNatural": "Semula Jadi",
+  "@paletteNatural": { "description": "Nama palet 'natural'." },
+  "paletteMinimal": "Minimal",
+  "@paletteMinimal": { "description": "Nama palet 'minimal'." },
+  "paletteMono": "Monokrom",
+  "@paletteMono": { "description": "Nama palet 'monochrome'." },
+
+
   "menuLanguage": "Bahasa",
   "@menuLanguage": {
     "description": "Tooltip/title for the language selection popup."

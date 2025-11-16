@@ -99,6 +99,30 @@ class AppLocalizationsMs extends AppLocalizations {
   String get paletteWater => 'Air';
 
   @override
+  String get paletteYin => 'Yin';
+
+  @override
+  String get paletteYang => 'Yang';
+
+  @override
+  String get paletteAbyss => 'Abyss';
+
+  @override
+  String get paletteLunar => 'Lunar';
+
+  @override
+  String get paletteStorm => 'Ribut';
+
+  @override
+  String get paletteNatural => 'Semula Jadi';
+
+  @override
+  String get paletteMinimal => 'Minimal';
+
+  @override
+  String get paletteMono => 'Monokrom';
+
+  @override
   String get menuLanguage => 'Bahasa';
 
   @override

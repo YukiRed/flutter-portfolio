@@ -20,6 +20,49 @@ Color _seedFor(AppPalette p) => switch (p) {
   AppPalette.wood => const Color(0xFF2E7D4F),
   AppPalette.fire => const Color(0xFFCF3D2E),
   AppPalette.water => const Color(0xFF1F7A8C),
+  AppPalette.yin => const Color(0xFF1F2933), // dark slate
+  AppPalette.yang => const Color(0xFFF59E0B), // amber
+  AppPalette.abyss => const Color(0xFF020617), // near-black navy
+  AppPalette.lunar => const Color(0xFF6366F1), // indigo
+  AppPalette.storm => const Color(0xFF0F172A), // stormy blue/charcoal
+  AppPalette.natural => const Color(0xFF15803D), // deep green
+  AppPalette.minimal => const Color(0xFFE5E7EB), // soft light neutral
+  AppPalette.mono => const Color(0xFF6B7280), // mid gray
+};
+
+// Primary accent for each Wu Xing palette (good for dividers, icons, chips)
+Color accentStrongFor(AppPalette p) => switch (p) {
+  AppPalette.metal => const Color(0xFF3B4B63),
+  AppPalette.earth => const Color(0xFF8B5A1F),
+  AppPalette.wood => const Color(0xFF25623D),
+  AppPalette.fire => const Color(0xFFB33025),
+  AppPalette.water => const Color(0xFF145A73),
+  AppPalette.yin => const Color(0xFF111827),
+  AppPalette.yang => const Color(0xFFB45309),
+  AppPalette.abyss => const Color(0xFF020617),
+  AppPalette.lunar => const Color(0xFF4F46E5),
+  AppPalette.storm => const Color(0xFF0B1120),
+  AppPalette.natural => const Color(0xFF166534),
+  AppPalette.minimal => const Color(0xFF9CA3AF),
+  AppPalette.mono => const Color(0xFF4B5563),
+};
+
+// Softer, background-friendly accent (chips, subtle pills, etc.)
+
+Color accentSoftFor(AppPalette p) => switch (p) {
+  AppPalette.metal => const Color(0xFFE5E9F1),
+  AppPalette.earth => const Color(0xFFF2E5D2),
+  AppPalette.wood => const Color(0xFFE0F2E6),
+  AppPalette.fire => const Color(0xFFFBE4E0),
+  AppPalette.water => const Color(0xFFD9EEF5),
+  AppPalette.yin => const Color(0xFF1F2937),
+  AppPalette.yang => const Color(0xFFFEF3C7),
+  AppPalette.abyss => const Color(0xFF020617),
+  AppPalette.lunar => const Color(0xFFE5E7FF),
+  AppPalette.storm => const Color(0xFF1E293B),
+  AppPalette.natural => const Color(0xFFD1FAE5),
+  AppPalette.minimal => const Color(0xFFF9FAFB),
+  AppPalette.mono => const Color(0xFFE5E7EB),
 };
 
 ThemeData _themeFrom(ColorScheme scheme) {
