@@ -10,6 +10,7 @@ import 'theme.dart';
 import 'theme_controller.dart';
 import 'lang_controller.dart';
 
+import '../core/utils/l10n.dart';
 import '../core/services/content_service.dart';
 import '../core/services/auth_service.dart';
 import '../l10n/app_localizations.dart';
@@ -68,14 +69,14 @@ class _PortfolioAppState extends State<PortfolioApp> {
             });
           }
 
-          final cfg = context.watch<AppConfig>();
           final themeCtrl = context.watch<ThemeController>();
           final langCtrl = context.watch<LanguageController>();
           final themes = buildTheme(themeCtrl.palette);
           final router = context.read<GoRouter>();
 
           return MaterialApp.router(
-            title: cfg.siteName,
+            onGenerateTitle: (context) => context.l10n.appTitle,
+
             debugShowCheckedModeBanner: false,
             theme: themes.light,
             darkTheme: themes.dark,

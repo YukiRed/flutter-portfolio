@@ -24,5 +24,6 @@ class ContentMeta {
     this.readingTime,
   });
 
-  bool get isPublic => visibility.toLowerCase() == 'public';
+  bool get isPrivate => visibility.toLowerCase() == 'private';
+  bool get isPublic => visibility.toLowerCase() != 'private';
 }

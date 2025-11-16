@@ -11,112 +11,92 @@
   "@navHome": {
     "description": "Top navigation: link to the home page."
   },
-
   "navProjects": "Projects",
   "@navProjects": {
     "description": "Top navigation: link to the projects listing."
   },
-
   "navBlog": "Blog",
   "@navBlog": {
     "description": "Top navigation: link to the blog index."
   },
-
   "navLabs": "Labs",
   "@navLabs": {
     "description": "Top navigation: link to the labs index."
   },
-
   "navLibrary": "Library",
   "@navLibrary": {
     "description": "Top navigation: link to the library / learning archive."
   },
-
   "navDiscover": "Discover",
   "@navDiscover": {
     "description": "Top navigation: label for the Discover menu (blog, library, people)."
   },
-
   "navPhilosophy": "Philosophy",
   "@navPhilosophy": {
     "description": "Top navigation: link to the philosophy/meta realm."
   },
-
   "navFoundation": "Foundation",
   "@navFoundation": {
     "description": "Top navigation: link to the foundation section."
   },
-
   "navTimeline": "Timeline",
   "@navTimeline": {
     "description": "Top navigation: link to the timeline page."
   },
-
   "navServices": "Services",
   "@navServices": {
     "description": "Top navigation: link to the services page."
   },
-
-  "navContact": "Contact",
-  "@navContact": {
-    "description": "Top navigation: link to the contact page."
-  },
-
   "navResume": "Résumé",
   "@navResume": {
     "description": "Top navigation: link to the resume/CV page."
   },
-
   "navLogin": "Login",
   "@navLogin": {
     "description": "Top navigation: link to the login/unlock page."
   },
-
   "navWork": "Work",
   "@navWork": {
     "description": "Top navigation: label for the Work menu (projects, labs, products)."
   },
-
   "navAbout": "About",
   "@navAbout": {
     "description": "Top navigation: label for the About menu."
   },
-
   "navPeople": "People",
   "@navPeople": {
     "description": "Top navigation: link to the people index."
   },
-
   "navCredits": "Credits",
   "@navCredits": {
     "description": "Top navigation: link to the credits/thanks page."
   },
-
   "navLogout": "Logout",
   "@navLogout": {
     "description": "Top navigation or drawer: button to log out / clear passphrase."
+  },
+  "navContact": "Contact",
+  "@navContact": {
+    "description": "Navigation label for Contact page",
+    "type": "text"
   },
 
   "menuTheme": "Theme",
   "@menuTheme": {
     "description": "Tooltip/title for the theme popup menu."
   },
-
   "menuThemeMode": "Theme Mode",
   "@menuThemeMode": {
     "description": "Label inside theme popup for choosing light/dark/system."
   },
-
   "themeSystem": "System",
   "@themeSystem": {
     "description": "Theme mode: follow the device/system setting."
   },
-
   "themeLight": "Light",
   "@themeLight": {
     "description": "Theme mode: light theme."
   },
-
   "themeDark": "Dark",
   "@themeDark": {
     "description": "Theme mode: dark theme."
@@ -126,27 +106,22 @@
   "@menuPalette": {
     "description": "Label for choosing a color palette."
   },
-
   "paletteMetal": "Metal",
   "@paletteMetal": {
     "description": "Name of the 'metal' color palette."
   },
-
   "paletteEarth": "Earth",
   "@paletteEarth": {
     "description": "Name of the 'earth' color palette."
   },
-
   "paletteWood": "Wood",
   "@paletteWood": {
     "description": "Name of the 'wood' color palette."
   },
-
   "paletteFire": "Fire",
   "@paletteFire": {
     "description": "Name of the 'fire' color palette."
   },
-
   "paletteWater": "Water",
   "@paletteWater": {
     "description": "Name of the 'water' color palette."
@@ -156,17 +131,14 @@
   "@menuLanguage": {
     "description": "Tooltip/title for the language selection popup."
   },
-
   "langEnglish": "English",
   "@langEnglish": {
     "description": "Language choice: English."
   },
-
   "langChinese": "中文",
   "@langChinese": {
     "description": "Language choice: Chinese."
   },
-
   "langMalay": "Bahasa Melayu",
   "@langMalay": {
     "description": "Language choice: Malay."
@@ -181,37 +153,30 @@
   "@authUnlockTitle": {
     "description": "Headline on the login/unlock page."
   },
-
   "authPassphraseLabel": "Passphrase",
   "@authPassphraseLabel": {
     "description": "Label for the passphrase text field."
   },
-
   "authUnlockButton": "Unlock",
   "@authUnlockButton": {
     "description": "Button label to unlock private content."
   },
-
   "authAlreadyLoggedInTitle": "You are logged in.",
   "@authAlreadyLoggedInTitle": {
     "description": "Title shown when the user is already authenticated."
   },
-
   "authAlreadyLoggedInBody": "Private items are visible.\nThis passphrase is stored locally until you log out.",
   "@authAlreadyLoggedInBody": {
     "description": "Body text explaining that private items are visible and passphrase is stored locally."
   },
-
   "authWrongPassphrase": "Wrong passphrase",
   "@authWrongPassphrase": {
     "description": "Snackbar message when passphrase validation fails."
   },
-
   "authUnlockSuccess": "Unlocked — private content will be shown.",
   "@authUnlockSuccess": {
     "description": "Snackbar message when unlocking succeeds."
   },
-
   "authCanaryTip": "Tip: You can add an optional canary in .env to validate the passphrase immediately.",
   "@authCanaryTip": {
     "description": "Small helper text on the login page explaining the canary mechanism."
@@ -221,12 +186,10 @@
   "@lockPrivateTitle": {
     "description": "Title on the lock banner when content is private."
   },
-
   "lockPrivateSubtitle": "Log in with passphrase to view the content.",
   "@lockPrivateSubtitle": {
     "description": "Subtitle on the lock banner explaining the need to log in."
   },
-
   "lockGoToLogin": "Go to Login",
   "@lockGoToLogin": {
     "description": "Button label on lock banner to navigate to the login page."
@@ -236,7 +199,6 @@
   "@visibilityPrivate": {
     "description": "Badge label indicating content is private."
   },
-
   "visibilityPublic": "Public",
   "@visibilityPublic": {
     "description": "Badge label indicating content is public."
@@ -246,62 +208,43 @@
   "@notFound404": {
     "description": "Main text for generic 404 page."
   },
-
   "notFoundGeneric": "Not found",
   "@notFoundGeneric": {
     "description": "Generic 'not found' message for various detail pages."
   },
-
   "notFoundPage": "Page not found",
   "@notFoundPage": {
     "description": "Message when a page slug is not found."
   },
-
   "metaDisabled": "Meta realm is disabled.",
   "@metaDisabled": {
     "description": "Message shown when the meta realm/section has been disabled in config."
-  },
-
-  "timelineSubtitle": "Milestones & significant updates",
-  "@timelineSubtitle": {
-    "description": "Subtitle for the timeline page header."
-  },
-
-  "timelineEmpty": "No timeline entries yet.",
-  "@timelineEmpty": {
-    "description": "Message shown when there are no timeline entries."
   },
 
   "workSectionTitle": "Work",
   "@workSectionTitle": {
     "description": "Main title for the Work index page."
   },
-
   "workSectionSubtitle": "Projects and Lab Experiments",
   "@workSectionSubtitle": {
     "description": "Subtitle for the Work index page."
   },
-
   "workFilterAll": "All",
   "@workFilterAll": {
     "description": "Work filter label: show all work items."
   },
-
   "workFilterProjects": "Projects",
   "@workFilterProjects": {
     "description": "Work filter label: show projects only."
   },
-
   "workFilterLabs": "Labs",
   "@workFilterLabs": {
     "description": "Work filter label: show lab items only."
   },
-
   "workFilterProducts": "Products",
   "@workFilterProducts": {
     "description": "Work filter label: show product/template items only."
   },
-
   "workEmpty": "No items yet.",
   "@workEmpty": {
     "description": "Message shown when there are no work items."
@@ -311,12 +254,10 @@
   "@blogSectionSubtitle": {
     "description": "Subtitle for the Blog index page."
   },
-
   "blogEmpty": "No blog posts yet.",
   "@blogEmpty": {
     "description": "Message shown when there are no blog posts."
   },
-
   "blogFilterAll": "All posts",
   "@blogFilterAll": {
     "description": "Blog filter label: show all posts."
@@ -326,12 +267,10 @@
   "@librarySectionSubtitle": {
     "description": "Subtitle for the Library index page."
   },
-
   "libraryEmpty": "No library entries yet.",
   "@libraryEmpty": {
     "description": "Message shown when there are no library items."
   },
-
   "libraryFilterAll": "All entries",
   "@libraryFilterAll": {
     "description": "Library filter label: show all entries."
@@ -341,12 +280,10 @@
   "@peopleSectionSubtitle": {
     "description": "Subtitle for the People index page."
   },
-
   "peopleEmpty": "No people profiles yet.",
   "@peopleEmpty": {
     "description": "Message shown when there are no people profiles."
   },
-
   "peopleFilterAll": "All people",
   "@peopleFilterAll": {
     "description": "People filter label: show all profiles."
@@ -356,9 +293,130 @@
   "@philosophySectionSubtitle": {
     "description": "Subtitle for the philosophy/meta index page."
   },
-
   "philosophyEmpty": "No philosophy notes are published yet.",
   "@philosophyEmpty": {
     "description": "Message shown when there are no philosophy notes."
+  },
+
+  "timelineSubtitle": "Milestones & significant updates",
+  "@timelineSubtitle": {
+    "description": "Subtitle for the timeline page header."
+  },
+  "timelineEmpty": "No timeline entries yet.",
+  "@timelineEmpty": {
+    "description": "Message shown when there are no timeline entries."
+  },
+
+  "contactSectionSubtitle": "Get in touch",
+  "@contactSectionSubtitle": {
+    "description": "Subtitle shown under Contact page header",
+    "type": "text"
+  },
+  "contactIntro": "I read my own email and prefer calm, direct communication. Whether you’re exploring a project, inviting a talk, or just want to discuss an idea, a short message with context is the best place to start.",
+  "@contactIntro": {
+    "description": "Intro paragraph at top of Contact page",
+    "type": "text"
+  },
+  "contactPrimaryTitle": "Primary contact",
+  "@contactPrimaryTitle": {
+    "description": "Title for main contact card",
+    "type": "text"
+  },
+  "contactPrimaryDescription": "For most things — consulting, collaborations, questions about my work — email is the simplest way to reach me. If a live conversation is easier, you can book a short call instead.",
+  "@contactPrimaryDescription": {
+    "description": "Description explaining how people should contact you",
+    "type": "text"
+  },
+  "contactPrimaryButtonEmail": "hello@desmondliew.dev",
+  "@contactPrimaryButtonEmail": {
+    "description": "Button label for email address",
+    "type": "text"
+  },
+  "contactPrimaryButtonCall": "Schedule a 15-minute call",
+  "@contactPrimaryButtonCall": {
+    "description": "Button label for scheduling a call via Calendly",
+    "type": "text"
+  },
+  "contactPrimaryLanguages": "Languages: English · 中文 · Bahasa Malaysia",
+  "@contactPrimaryLanguages": {
+    "description": "Language availability display",
+    "type": "text"
+  },
+  "contactOfficeHoursLabel": "Office hours",
+  "@contactOfficeHoursLabel": {
+    "description": "Label for office hours section",
+    "type": "text"
+  },
+  "contactOfficeHoursValue": "Mon – Fri · 9:00 – 15:00",
+  "@contactOfficeHoursValue": {
+    "description": "Value for office hours",
+    "type": "text"
+  },
+  "contactTimezoneLabel": "Timezone",
+  "@contactTimezoneLabel": {
+    "description": "Label for timezone",
+    "type": "text"
+  },
+  "contactTimezoneValue": "Malaysia / Singapore (GMT+8)",
+  "@contactTimezoneValue": {
+    "description": "Displayed timezone",
+    "type": "text"
+  },
+  "contactResponseTime": "Typical response: within 1–2 days",
+  "@contactResponseTime": {
+    "description": "Expected response time",
+    "type": "text"
+  },
+  "contactPrivacyTitle": "Privacy & boundaries",
+  "@contactPrivacyTitle": {
+    "description": "Title for privacy and boundaries section",
+    "type": "text"
+  },
+  "contactPrivacyNote": "I handle all communication personally and keep messages private. I never share emails or details with third parties.",
+  "@contactPrivacyNote": {
+    "description": "General privacy guarantee statement",
+    "type": "text"
+  },
+  "contactPrivacyWarning": "For first contact, high-level descriptions are enough. Please avoid sending sensitive personal details or confidential client data in the initial email.",
+  "@contactPrivacyWarning": {
+    "description": "Warning to avoid sending sensitive data",
+    "type": "text"
+  },
+  "contactPrivacyEthics": "I don’t take on work involving surveillance tooling, dark patterns, or undisclosed data scraping.",
+  "@contactPrivacyEthics": {
+    "description": "Ethical boundaries for unacceptable work",
+    "type": "text"
+  },
+
+  "testimonialsSectionTitle": "Testimonials",
+  "@testimonialsSectionTitle": {
+    "description": "Title for testimonials card",
+    "type": "text"
+  },
+  "testimonialsSectionSubtitle": "Notes from collaborators and clients",
+  "@testimonialsSectionSubtitle": {
+    "description": "Subtitle for testimonials card",
+    "type": "text"
+  },
+  "contactTestimonialDescription": "If you want to understand how I work with teams, you can read a few short notes from collaborators and clients.",
+  "@contactTestimonialDescription": {
+    "description": "Description explaining what testimonials contain",
+    "type": "text"
+  },
+  "contactTestimonialButton": "View testimonials",
+  "@contactTestimonialButton": {
+    "description": "Button to open testimonials page",
+    "type": "text"
+  },
+
+  "contactAccessibilityTitle": "Accessibility",
+  "@contactAccessibilityTitle": {
+    "description": "Title for accessibility notes",
+    "type": "text"
+  },
+  "contactAccessibilityNote": "If you have specific accessibility needs for communication — for example, written-only, captions for calls, or alternative tools — mention it in your message. I will adapt where I can.",
+  "@contactAccessibilityNote": {
+    "description": "Accessibility statement for communication",
+    "type": "text"
   }
 }

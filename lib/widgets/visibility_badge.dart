@@ -1,31 +1,38 @@
 import 'package:flutter/material.dart';
-import '../core/utils/l10n.dart';
+import 'package:provider/provider.dart';
+import '../core/services/auth_service.dart';
+import '../../core/utils/l10n.dart';
 
 class VisibilityBadge extends StatelessWidget {
   final bool isPrivate;
+
   const VisibilityBadge({super.key, required this.isPrivate});
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
-    final base = isPrivate ? scheme.error : scheme.secondary;
+    final auth = context.watch<AuthService>();
 
-    // withOpacity() is deprecated → use withValues(alpha: ...)
-    final bg = base.withValues(alpha: 0.10);
-    final border = base.withValues(alpha: 0.40);
+    // 🚫 Not logged in → hide completely
+    if (!auth.isLoggedIn) return const SizedBox.shrink();
 
-    final label = isPrivate
-        ? context.l10n.visibilityPrivate
-        : context.l10n.visibilityPublic;
+    final baseColor = isPrivate ? Colors.red : Colors.green;
 
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: bg,
-        border: Border.all(color: border),
-        borderRadius: BorderRadius.circular(999),
+        color: baseColor.withValues(alpha: 0.15), // ✅ modern API
+        borderRadius: BorderRadius.circular(6),
       ),
-      child: Text(label, style: TextStyle(color: base, fontSize: 12)),
+      child: Text(
+        isPrivate
+            ? context.l10n.visibilityPrivate
+            : context.l10n.visibilityPublic,
+        style: TextStyle(
+          color: baseColor,
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
     );
   }
 }

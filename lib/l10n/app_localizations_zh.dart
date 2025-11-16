@@ -42,9 +42,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String get navServices => '服务';
 
   @override
-  String get navContact => '联系';
-
-  @override
   String get navResume => '简历';
 
   @override
@@ -64,6 +61,9 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get navLogout => '退出登录';
+
+  @override
+  String get navContact => '联系';
 
   @override
   String get menuTheme => '主题';
@@ -165,12 +165,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String get metaDisabled => 'Meta 领域已关闭。';
 
   @override
-  String get timelineSubtitle => '里程碑与重要更新';
-
-  @override
-  String get timelineEmpty => '暂时还没有时间线条目。';
-
-  @override
   String get workSectionTitle => '工作';
 
   @override
@@ -223,4 +217,81 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get philosophyEmpty => '暂时还没有发布哲学笔记。';
+
+  @override
+  String get timelineSubtitle => '里程碑与重要更新';
+
+  @override
+  String get timelineEmpty => '暂时还没有时间线条目。';
+
+  @override
+  String get contactSectionSubtitle => '保持联系';
+
+  @override
+  String get contactIntro =>
+      '我亲自阅读每一封邮件，也偏好安静、直接的沟通方式。无论你是想探讨项目、邀请演讲，或只是想交流一个想法，简单清晰的背景信息就是很好的开始。';
+
+  @override
+  String get contactPrimaryTitle => '主要联系方式';
+
+  @override
+  String get contactPrimaryDescription =>
+      '大多数合作—咨询、技术交流、对我工作有问题—都可以直接通过邮件联系。如果你更喜欢实时沟通，也可以预约一个简短的通话。';
+
+  @override
+  String get contactPrimaryButtonEmail => 'hello@desmondliew.dev';
+
+  @override
+  String get contactPrimaryButtonCall => '预约 15 分钟通话';
+
+  @override
+  String get contactPrimaryLanguages => '可用语言：English · 中文 · Bahasa Malaysia';
+
+  @override
+  String get contactOfficeHoursLabel => '工作时间';
+
+  @override
+  String get contactOfficeHoursValue => '周一至周五 · 9:00 – 15:00';
+
+  @override
+  String get contactTimezoneLabel => '时区';
+
+  @override
+  String get contactTimezoneValue => '马来西亚 / 新加坡（GMT+8）';
+
+  @override
+  String get contactResponseTime => '通常在 1–2 天内回复';
+
+  @override
+  String get contactPrivacyTitle => '隐私与界限';
+
+  @override
+  String get contactPrivacyNote => '所有沟通均由我本人亲自处理，不会与任何第三方共享邮件或细节。';
+
+  @override
+  String get contactPrivacyWarning => '首次联系时提供高层次描述即可，请避免发送敏感个人信息或机密客户资料。';
+
+  @override
+  String get contactPrivacyEthics =>
+      '我不接受涉及监控工具、欺骗性设计（dark patterns）或隐蔽数据抓取的项目。';
+
+  @override
+  String get testimonialsSectionTitle => '推荐语';
+
+  @override
+  String get testimonialsSectionSubtitle => '来自合作伙伴与客户的简短评价';
+
+  @override
+  String get contactTestimonialDescription =>
+      '如果你想了解我如何与团队合作，可以阅读一些来自合作伙伴与客户的简短评价。';
+
+  @override
+  String get contactTestimonialButton => '查看推荐语';
+
+  @override
+  String get contactAccessibilityTitle => '无障碍支持';
+
+  @override
+  String get contactAccessibilityNote =>
+      '如果你在沟通上有特定的无障碍需求——例如仅文字沟通、通话字幕、或其他辅助方式——请在信息中说明，我会尽力配合。';
 }

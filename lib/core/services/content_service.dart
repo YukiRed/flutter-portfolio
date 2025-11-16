@@ -12,12 +12,9 @@ class ContentService extends ChangeNotifier {
   Future<void> ensureLoaded() async {
     if (_loaded) return;
     final paths = await listMarkdownAssets();
-    // Debug: print discovered asset paths when running in debug mode
     if (kDebugMode) {
-      // ignore: avoid_print
       print('[ContentService] discovered ${paths.length} markdown assets');
       for (final p in paths) {
-        // ignore: avoid_print
         print('[ContentService] asset: $p');
       }
     }
@@ -27,7 +24,6 @@ class ContentService extends ChangeNotifier {
       if (fm.meta.isEmpty) continue;
       final meta = _toMeta(fm.meta, path);
       if (kDebugMode) {
-        // ignore: avoid_print
         print(
           '[ContentService] parsed: type=${meta.type} slug=${meta.slug} visibility=${meta.visibility} path=${meta.path}',
         );
@@ -78,5 +74,30 @@ class ContentService extends ChangeNotifier {
       (a, b) => (b.date ?? DateTime(1970)).compareTo(a.date ?? DateTime(1970)),
     );
     return list;
+  }
+
+  // ----------------------------------------------------------------------
+  // 🔒 NEW — PRIVATE CONTENT DETECTION FOR ROUTER REDIRECT
+  // ----------------------------------------------------------------------
+
+  /// Find ContentMeta by matching slug from a route path
+  ContentMeta? findMetaByPath(String path) {
+    // Extract last path section as slug
+    // e.g. /foundation/foundation-credits → slug: foundation-credits
+    final slug = path.split('/').last.trim();
+    if (slug.isEmpty) return null;
+
+    try {
+      return _all.firstWhere((m) => m.slug == slug);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// Check if a route points to a private content item
+  bool isPrivatePath(String path) {
+    final meta = findMetaByPath(path);
+    if (meta == null) return false;
+    return meta.isPrivate;
   }
 }

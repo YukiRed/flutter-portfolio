@@ -42,9 +42,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get navServices => 'Services';
 
   @override
-  String get navContact => 'Contact';
-
-  @override
   String get navResume => 'Résumé';
 
   @override
@@ -64,6 +61,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get navLogout => 'Logout';
+
+  @override
+  String get navContact => 'Contact';
 
   @override
   String get menuTheme => 'Theme';
@@ -168,12 +168,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get metaDisabled => 'Meta realm is disabled.';
 
   @override
-  String get timelineSubtitle => 'Milestones & significant updates';
-
-  @override
-  String get timelineEmpty => 'No timeline entries yet.';
-
-  @override
   String get workSectionTitle => 'Work';
 
   @override
@@ -230,4 +224,85 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get philosophyEmpty => 'No philosophy notes are published yet.';
+
+  @override
+  String get timelineSubtitle => 'Milestones & significant updates';
+
+  @override
+  String get timelineEmpty => 'No timeline entries yet.';
+
+  @override
+  String get contactSectionSubtitle => 'Get in touch';
+
+  @override
+  String get contactIntro =>
+      'I read my own email and prefer calm, direct communication. Whether you’re exploring a project, inviting a talk, or just want to discuss an idea, a short message with context is the best place to start.';
+
+  @override
+  String get contactPrimaryTitle => 'Primary contact';
+
+  @override
+  String get contactPrimaryDescription =>
+      'For most things — consulting, collaborations, questions about my work — email is the simplest way to reach me. If a live conversation is easier, you can book a short call instead.';
+
+  @override
+  String get contactPrimaryButtonEmail => 'hello@desmondliew.dev';
+
+  @override
+  String get contactPrimaryButtonCall => 'Schedule a 15-minute call';
+
+  @override
+  String get contactPrimaryLanguages =>
+      'Languages: English · 中文 · Bahasa Malaysia';
+
+  @override
+  String get contactOfficeHoursLabel => 'Office hours';
+
+  @override
+  String get contactOfficeHoursValue => 'Mon – Fri · 9:00 – 15:00';
+
+  @override
+  String get contactTimezoneLabel => 'Timezone';
+
+  @override
+  String get contactTimezoneValue => 'Malaysia / Singapore (GMT+8)';
+
+  @override
+  String get contactResponseTime => 'Typical response: within 1–2 days';
+
+  @override
+  String get contactPrivacyTitle => 'Privacy & boundaries';
+
+  @override
+  String get contactPrivacyNote =>
+      'I handle all communication personally and keep messages private. I never share emails or details with third parties.';
+
+  @override
+  String get contactPrivacyWarning =>
+      'For first contact, high-level descriptions are enough. Please avoid sending sensitive personal details or confidential client data in the initial email.';
+
+  @override
+  String get contactPrivacyEthics =>
+      'I don’t take on work involving surveillance tooling, dark patterns, or undisclosed data scraping.';
+
+  @override
+  String get testimonialsSectionTitle => 'Testimonials';
+
+  @override
+  String get testimonialsSectionSubtitle =>
+      'Notes from collaborators and clients';
+
+  @override
+  String get contactTestimonialDescription =>
+      'If you want to understand how I work with teams, you can read a few short notes from collaborators and clients.';
+
+  @override
+  String get contactTestimonialButton => 'View testimonials';
+
+  @override
+  String get contactAccessibilityTitle => 'Accessibility';
+
+  @override
+  String get contactAccessibilityNote =>
+      'If you have specific accessibility needs for communication — for example, written-only, captions for calls, or alternative tools — mention it in your message. I will adapt where I can.';
 }

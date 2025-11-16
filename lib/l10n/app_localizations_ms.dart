@@ -42,9 +42,6 @@ class AppLocalizationsMs extends AppLocalizations {
   String get navServices => 'Perkhidmatan';
 
   @override
-  String get navContact => 'Hubungi';
-
-  @override
   String get navResume => 'Résumé';
 
   @override
@@ -64,6 +61,9 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get navLogout => 'Log Keluar';
+
+  @override
+  String get navContact => 'Hubungi';
 
   @override
   String get menuTheme => 'Tema';
@@ -170,12 +170,6 @@ class AppLocalizationsMs extends AppLocalizations {
   String get metaDisabled => 'Ruang meta dimatikan.';
 
   @override
-  String get timelineSubtitle => 'Pencapaian & kemas kini penting';
-
-  @override
-  String get timelineEmpty => 'Belum ada catatan garis masa.';
-
-  @override
   String get workSectionTitle => 'Kerja';
 
   @override
@@ -232,4 +226,85 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get philosophyEmpty => 'Belum ada nota falsafah diterbitkan.';
+
+  @override
+  String get timelineSubtitle => 'Pencapaian & kemas kini penting';
+
+  @override
+  String get timelineEmpty => 'Belum ada catatan garis masa.';
+
+  @override
+  String get contactSectionSubtitle => 'Hubungi saya';
+
+  @override
+  String get contactIntro =>
+      'Saya membaca semua emel sendiri dan lebih suka komunikasi yang tenang dan terus. Sama ada anda ingin berbincang tentang projek, menjemput saya memberi ceramah, atau sekadar berkongsi idea, mesej ringkas dengan konteks adalah permulaan terbaik.';
+
+  @override
+  String get contactPrimaryTitle => 'Cara utama untuk menghubungi';
+
+  @override
+  String get contactPrimaryDescription =>
+      'Untuk kebanyakan perkara — konsultansi, kolaborasi, atau soalan mengenai kerja saya — emel ialah cara paling mudah untuk berhubung. Jika anda lebih selesa berbual secara langsung, anda boleh menjadualkan panggilan pendek.';
+
+  @override
+  String get contactPrimaryButtonEmail => 'hello@desmondliew.dev';
+
+  @override
+  String get contactPrimaryButtonCall => 'Tempah panggilan 15 minit';
+
+  @override
+  String get contactPrimaryLanguages =>
+      'Bahasa: English · 中文 · Bahasa Malaysia';
+
+  @override
+  String get contactOfficeHoursLabel => 'Waktu bekerja';
+
+  @override
+  String get contactOfficeHoursValue => 'Isnin – Jumaat · 9:00 – 15:00';
+
+  @override
+  String get contactTimezoneLabel => 'Zon masa';
+
+  @override
+  String get contactTimezoneValue => 'Malaysia / Singapura (GMT+8)';
+
+  @override
+  String get contactResponseTime => 'Kebiasaannya membalas dalam 1–2 hari';
+
+  @override
+  String get contactPrivacyTitle => 'Privasi & batasan';
+
+  @override
+  String get contactPrivacyNote =>
+      'Semua komunikasi dikendalikan oleh saya sendiri dan tidak akan dikongsi dengan pihak ketiga.';
+
+  @override
+  String get contactPrivacyWarning =>
+      'Untuk mesej pertama, penerangan ringkas sudah memadai. Elakkan berkongsi maklumat peribadi sensitif atau data sulit pelanggan.';
+
+  @override
+  String get contactPrivacyEthics =>
+      'Saya tidak menerima projek yang melibatkan alat pengawasan, dark patterns, atau pengambilan data tanpa pengetahuan pengguna.';
+
+  @override
+  String get testimonialsSectionTitle => 'Testimoni';
+
+  @override
+  String get testimonialsSectionSubtitle =>
+      'Catatan ringkas daripada rakan kerjasama dan klien';
+
+  @override
+  String get contactTestimonialDescription =>
+      'Jika anda ingin memahami cara saya bekerja dengan pasukan, anda boleh membaca beberapa catatan daripada rakan kerjasama dan klien.';
+
+  @override
+  String get contactTestimonialButton => 'Lihat testimoni';
+
+  @override
+  String get contactAccessibilityTitle => 'Aksesibiliti';
+
+  @override
+  String get contactAccessibilityNote =>
+      'Jika anda mempunyai keperluan aksesibiliti tertentu — seperti komunikasi bertulis sahaja, kapsyen untuk panggilan, atau alat alternatif — beritahu saya dalam mesej. Saya akan cuba menyesuaikan keperluan anda.';
 }

@@ -1,5 +1,8 @@
 import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
+
 import '../core/services/content_service.dart';
+import '../core/services/auth_service.dart';
 import '../features/shell/shell.dart';
 import '../features/home/home_page.dart';
 import '../features/pages/page_viewer.dart';
@@ -187,7 +190,21 @@ GoRouter buildRouter(ContentService content) {
     ],
     errorBuilder: (context, state) => const NotFoundPage(),
     redirect: (context, state) async {
+      final auth = context.read<AuthService>();
+
+      // ensure content is indexed
       await content.ensureLoaded();
+
+      final path = state.uri.toString();
+
+      // allow login page
+      if (path.startsWith('/login')) return null;
+
+      // if private page && not logged in → block
+      if (!auth.isLoggedIn && content.isPrivatePath(path)) {
+        return '/';
+      }
+
       return null;
     },
   );

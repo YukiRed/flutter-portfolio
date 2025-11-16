@@ -123,7 +123,7 @@ class _LoginPageState extends State<LoginPage> {
                           child: CircularProgressIndicator(strokeWidth: 2),
                         )
                       : const Icon(Icons.lock_open),
-                  label: const Text('Unlock'),
+                  label: Text(context.l10n.authUnlockButton),
                 ),
                 const SizedBox(height: 8),
                 Text(

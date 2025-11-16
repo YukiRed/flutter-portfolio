@@ -122,7 +122,6 @@ flutter:
     - assets/contents/en/people/
     - assets/contents/en/products/
     - assets/contents/en/projects/
-    - assets/contents/en/testimonials/
     - assets/contents/en/timeline/
 
     - assets/contents/ms/blog/
@@ -134,7 +133,6 @@ flutter:
     - assets/contents/ms/people/
     - assets/contents/ms/products/
     - assets/contents/ms/projects/
-    - assets/contents/ms/testimonials/
     - assets/contents/ms/timeline/
 
     - assets/contents/zh/blog/
@@ -146,7 +144,6 @@ flutter:
     - assets/contents/zh/people/
     - assets/contents/zh/products/
     - assets/contents/zh/projects/
-    - assets/contents/zh/testimonials/
     - assets/contents/zh/timeline/
 
     - assets/images/

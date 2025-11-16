@@ -166,12 +166,6 @@ abstract class AppLocalizations {
   /// **'Services'**
   String get navServices;
 
-  /// Top navigation: link to the contact page.
-  ///
-  /// In en, this message translates to:
-  /// **'Contact'**
-  String get navContact;
-
   /// Top navigation: link to the resume/CV page.
   ///
   /// In en, this message translates to:
@@ -213,6 +207,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Logout'**
   String get navLogout;
+
+  /// Navigation label for Contact page
+  ///
+  /// In en, this message translates to:
+  /// **'Contact'**
+  String get navContact;
 
   /// Tooltip/title for the theme popup menu.
   ///
@@ -412,18 +412,6 @@ abstract class AppLocalizations {
   /// **'Meta realm is disabled.'**
   String get metaDisabled;
 
-  /// Subtitle for the timeline page header.
-  ///
-  /// In en, this message translates to:
-  /// **'Milestones & significant updates'**
-  String get timelineSubtitle;
-
-  /// Message shown when there are no timeline entries.
-  ///
-  /// In en, this message translates to:
-  /// **'No timeline entries yet.'**
-  String get timelineEmpty;
-
   /// Main title for the Work index page.
   ///
   /// In en, this message translates to:
@@ -531,6 +519,150 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No philosophy notes are published yet.'**
   String get philosophyEmpty;
+
+  /// Subtitle for the timeline page header.
+  ///
+  /// In en, this message translates to:
+  /// **'Milestones & significant updates'**
+  String get timelineSubtitle;
+
+  /// Message shown when there are no timeline entries.
+  ///
+  /// In en, this message translates to:
+  /// **'No timeline entries yet.'**
+  String get timelineEmpty;
+
+  /// Subtitle shown under Contact page header
+  ///
+  /// In en, this message translates to:
+  /// **'Get in touch'**
+  String get contactSectionSubtitle;
+
+  /// Intro paragraph at top of Contact page
+  ///
+  /// In en, this message translates to:
+  /// **'I read my own email and prefer calm, direct communication. Whether you’re exploring a project, inviting a talk, or just want to discuss an idea, a short message with context is the best place to start.'**
+  String get contactIntro;
+
+  /// Title for main contact card
+  ///
+  /// In en, this message translates to:
+  /// **'Primary contact'**
+  String get contactPrimaryTitle;
+
+  /// Description explaining how people should contact you
+  ///
+  /// In en, this message translates to:
+  /// **'For most things — consulting, collaborations, questions about my work — email is the simplest way to reach me. If a live conversation is easier, you can book a short call instead.'**
+  String get contactPrimaryDescription;
+
+  /// Button label for email address
+  ///
+  /// In en, this message translates to:
+  /// **'hello@desmondliew.dev'**
+  String get contactPrimaryButtonEmail;
+
+  /// Button label for scheduling a call via Calendly
+  ///
+  /// In en, this message translates to:
+  /// **'Schedule a 15-minute call'**
+  String get contactPrimaryButtonCall;
+
+  /// Language availability display
+  ///
+  /// In en, this message translates to:
+  /// **'Languages: English · 中文 · Bahasa Malaysia'**
+  String get contactPrimaryLanguages;
+
+  /// Label for office hours section
+  ///
+  /// In en, this message translates to:
+  /// **'Office hours'**
+  String get contactOfficeHoursLabel;
+
+  /// Value for office hours
+  ///
+  /// In en, this message translates to:
+  /// **'Mon – Fri · 9:00 – 15:00'**
+  String get contactOfficeHoursValue;
+
+  /// Label for timezone
+  ///
+  /// In en, this message translates to:
+  /// **'Timezone'**
+  String get contactTimezoneLabel;
+
+  /// Displayed timezone
+  ///
+  /// In en, this message translates to:
+  /// **'Malaysia / Singapore (GMT+8)'**
+  String get contactTimezoneValue;
+
+  /// Expected response time
+  ///
+  /// In en, this message translates to:
+  /// **'Typical response: within 1–2 days'**
+  String get contactResponseTime;
+
+  /// Title for privacy and boundaries section
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy & boundaries'**
+  String get contactPrivacyTitle;
+
+  /// General privacy guarantee statement
+  ///
+  /// In en, this message translates to:
+  /// **'I handle all communication personally and keep messages private. I never share emails or details with third parties.'**
+  String get contactPrivacyNote;
+
+  /// Warning to avoid sending sensitive data
+  ///
+  /// In en, this message translates to:
+  /// **'For first contact, high-level descriptions are enough. Please avoid sending sensitive personal details or confidential client data in the initial email.'**
+  String get contactPrivacyWarning;
+
+  /// Ethical boundaries for unacceptable work
+  ///
+  /// In en, this message translates to:
+  /// **'I don’t take on work involving surveillance tooling, dark patterns, or undisclosed data scraping.'**
+  String get contactPrivacyEthics;
+
+  /// Title for testimonials card
+  ///
+  /// In en, this message translates to:
+  /// **'Testimonials'**
+  String get testimonialsSectionTitle;
+
+  /// Subtitle for testimonials card
+  ///
+  /// In en, this message translates to:
+  /// **'Notes from collaborators and clients'**
+  String get testimonialsSectionSubtitle;
+
+  /// Description explaining what testimonials contain
+  ///
+  /// In en, this message translates to:
+  /// **'If you want to understand how I work with teams, you can read a few short notes from collaborators and clients.'**
+  String get contactTestimonialDescription;
+
+  /// Button to open testimonials page
+  ///
+  /// In en, this message translates to:
+  /// **'View testimonials'**
+  String get contactTestimonialButton;
+
+  /// Title for accessibility notes
+  ///
+  /// In en, this message translates to:
+  /// **'Accessibility'**
+  String get contactAccessibilityTitle;
+
+  /// Accessibility statement for communication
+  ///
+  /// In en, this message translates to:
+  /// **'If you have specific accessibility needs for communication — for example, written-only, captions for calls, or alternative tools — mention it in your message. I will adapt where I can.'**
+  String get contactAccessibilityNote;
 }
 
 class _AppLocalizationsDelegate

@@ -30,7 +30,7 @@ class Shell extends StatelessWidget {
           child: InkWell(
             onTap: () => context.go('/'),
             child: Text(
-              cfg.siteName,
+              context.l10n.appTitle,
               overflow: TextOverflow.ellipsis,
               style: Theme.of(context).appBarTheme.titleTextStyle,
             ),
