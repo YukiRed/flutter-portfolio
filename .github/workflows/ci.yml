@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true # pull your Portfolio-Contents repo
+          submodules: recursive # pull your Portfolio-Contents repo
           fetch-depth: 0 # full history (safer for tools that read git info)
 
       - uses: subosito/flutter-action@v2

@@ -3,7 +3,7 @@ name: Build Multi-Platform Releases
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
   workflow_dispatch:
 
 permissions:
@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: recursive
           fetch-depth: 0
 
       - uses: subosito/flutter-action@v2
@@ -39,14 +39,13 @@ jobs:
           name: android-apk
           path: build/app/outputs/flutter-apk/app-release.apk
 
-
   # ---------- LINUX ----------
   linux:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: recursive
           fetch-depth: 0
 
       - uses: subosito/flutter-action@v2
@@ -77,14 +76,13 @@ jobs:
           name: linux-bundle
           path: linux-bundle.tar.gz
 
-
   # ---------- WINDOWS ----------
   windows:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: recursive
           fetch-depth: 0
 
       - uses: subosito/flutter-action@v2
@@ -118,7 +116,7 @@ jobs:
   #   steps:
   #     - uses: actions/checkout@v4
   #        with:
-  #          submodules: true
+  #          submodules: recursive
   #          fetch-depth: 0
   #     - uses: subosito/flutter-action@v2
   #       with:
@@ -141,7 +139,7 @@ jobs:
 
   # ---------- CREATE GITHUB RELEASE WITH ARTIFACTS ----------
   release:
-    needs: [android, linux, windows]  # add 'macos' if enabling that job
+    needs: [android, linux, windows] # add 'macos' if enabling that job
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
