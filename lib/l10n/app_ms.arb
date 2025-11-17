@@ -1,0 +1,439 @@
+{
+  "@@locale": "ms",
+  "@@last_modified": "Malay localization with full metadata",
+
+  "appTitle": "Portfolio Desmond Liew",
+  "@appTitle": {
+    "description": "Application title shown in window title / browser tab."
+  },
+  "navHome": "Laman Utama",
+  "@navHome": {
+    "description": "Top navigation: link to the home page."
+  },
+  "navProjects": "Projek",
+  "@navProjects": {
+    "description": "Top navigation: link to the projects listing."
+  },
+  "navBlog": "Blog",
+  "@navBlog": {
+    "description": "Top navigation: link to the blog index."
+  },
+  "navLabs": "Makmal",
+  "@navLabs": {
+    "description": "Top navigation: link to the labs index."
+  },
+  "navLibrary": "Perpustakaan",
+  "@navLibrary": {
+    "description": "Top navigation: link to the library / learning archive."
+  },
+  "navDiscover": "Teroka",
+  "@navDiscover": {
+    "description": "Top navigation: label for the Discover menu (blog, library, people)."
+  },
+  "navPhilosophy": "Falsafah",
+  "@navPhilosophy": {
+    "description": "Top navigation: link to the philosophy/meta realm."
+  },
+  "navFoundation": "Asas",
+  "@navFoundation": {
+    "description": "Top navigation: link to the foundation section."
+  },
+  "navTimeline": "Garis Masa",
+  "@navTimeline": {
+    "description": "Top navigation: link to the timeline page."
+  },
+  "navServices": "Perkhidmatan",
+  "@navServices": {
+    "description": "Top navigation: link to the services page."
+  },
+  "navResume": "Résumé",
+  "@navResume": {
+    "description": "Top navigation: link to the resume/CV page."
+  },
+  "navLogin": "Log Masuk",
+  "@navLogin": {
+    "description": "Top navigation: link to the login/unlock page."
+  },
+  "navWork": "Kerja",
+  "@navWork": {
+    "description": "Top navigation: label for the Work menu (projects, labs, products)."
+  },
+  "navAbout": "Tentang",
+  "@navAbout": {
+    "description": "Top navigation: label for the About menu."
+  },
+  "navPeople": "Tokoh",
+  "@navPeople": {
+    "description": "Top navigation: link to the people index."
+  },
+  "navCredits": "Penghargaan",
+  "@navCredits": {
+    "description": "Top navigation: link to the credits/thanks page."
+  },
+  "navLogout": "Log Keluar",
+  "@navLogout": {
+    "description": "Top navigation or drawer: button to log out / clear passphrase."
+  },
+  "navContact": "Hubungi",
+  "@navContact": {
+    "description": "Navigation label for Contact page",
+    "type": "text"
+  },
+
+  "menuTheme": "Tema",
+  "@menuTheme": {
+    "description": "Tooltip/title for the theme popup menu."
+  },
+  "menuThemeMode": "Mod Tema",
+  "@menuThemeMode": {
+    "description": "Label inside theme popup for choosing light/dark/system."
+  },
+  "themeSystem": "Sistem",
+  "@themeSystem": {
+    "description": "Theme mode: follow the device/system setting."
+  },
+  "themeLight": "Cerah",
+  "@themeLight": {
+    "description": "Theme mode: light theme."
+  },
+  "themeDark": "Gelap",
+  "@themeDark": {
+    "description": "Theme mode: dark theme."
+  },
+
+  "menuPalette": "Palet",
+  "@menuPalette": {
+    "description": "Label for choosing a color palette."
+  },
+  "paletteMetal": "Logam",
+  "@paletteMetal": {
+    "description": "Name of the 'metal' color palette."
+  },
+  "paletteEarth": "Tanah",
+  "@paletteEarth": {
+    "description": "Name of the 'earth' color palette."
+  },
+  "paletteWood": "Kayu",
+  "@paletteWood": {
+    "description": "Name of the 'wood' color palette."
+  },
+  "paletteFire": "Api",
+  "@paletteFire": {
+    "description": "Name of the 'fire' color palette."
+  },
+  "paletteWater": "Air",
+  "@paletteWater": {
+    "description": "Name of the 'water' color palette."
+  },
+
+  "paletteYin": "Yin",
+  "@paletteYin": { "description": "Nama palet 'yin'." },
+  "paletteYang": "Yang",
+  "@paletteYang": { "description": "Nama palet 'yang'." },
+  "paletteAbyss": "Abyss",
+  "@paletteAbyss": { "description": "Nama palet 'abyss'." },
+  "paletteLunar": "Lunar",
+  "@paletteLunar": { "description": "Nama palet 'lunar'." },
+  "paletteStorm": "Ribut",
+  "@paletteStorm": { "description": "Nama palet 'storm'." },
+  "paletteNatural": "Semula Jadi",
+  "@paletteNatural": { "description": "Nama palet 'natural'." },
+  "paletteMinimal": "Minimal",
+  "@paletteMinimal": { "description": "Nama palet 'minimal'." },
+  "paletteMono": "Monokrom",
+  "@paletteMono": { "description": "Nama palet 'monochrome'." },
+
+
+  "menuLanguage": "Bahasa",
+  "@menuLanguage": {
+    "description": "Tooltip/title for the language selection popup."
+  },
+  "langEnglish": "Inggeris",
+  "@langEnglish": {
+    "description": "Language choice: English."
+  },
+  "langChinese": "中文",
+  "@langChinese": {
+    "description": "Language choice: Chinese."
+  },
+  "langMalay": "Bahasa Melayu",
+  "@langMalay": {
+    "description": "Language choice: Malay."
+  },
+
+  "homeTagline": "Jurutera AI Gunaan · Arkitek Sistem",
+  "@homeTagline": {
+    "description": "Tagline shown on the home page hero."
+  },
+
+  "authUnlockTitle": "Masukkan frasa laluan untuk buka kandungan peribadi",
+  "@authUnlockTitle": {
+    "description": "Headline on the login/unlock page."
+  },
+  "authPassphraseLabel": "Frasa laluan",
+  "@authPassphraseLabel": {
+    "description": "Label for the passphrase text field."
+  },
+  "authUnlockButton": "Buka",
+  "@authUnlockButton": {
+    "description": "Button label to unlock private content."
+  },
+  "authAlreadyLoggedInTitle": "Anda sudah log masuk.",
+  "@authAlreadyLoggedInTitle": {
+    "description": "Title shown when the user is already authenticated."
+  },
+  "authAlreadyLoggedInBody": "Item peribadi kini kelihatan.\nFrasa laluan ini disimpan secara setempat sehingga anda log keluar.",
+  "@authAlreadyLoggedInBody": {
+    "description": "Body text explaining that private items are visible and passphrase is stored locally."
+  },
+  "authWrongPassphrase": "Frasa laluan salah",
+  "@authWrongPassphrase": {
+    "description": "Snackbar message when passphrase validation fails."
+  },
+  "authUnlockSuccess": "Dibuka — kandungan peribadi akan dipaparkan.",
+  "@authUnlockSuccess": {
+    "description": "Snackbar message when unlocking succeeds."
+  },
+  "authCanaryTip": "Tip: Anda boleh tambah canary pilihan dalam .env untuk sahkan frasa laluan dengan segera.",
+  "@authCanaryTip": {
+    "description": "Small helper text on the login page explaining the canary mechanism."
+  },
+
+  "lockPrivateTitle": "Kandungan ini peribadi.",
+  "@lockPrivateTitle": {
+    "description": "Title on the lock banner when content is private."
+  },
+  "lockPrivateSubtitle": "Log masuk dengan frasa laluan untuk melihat kandungan.",
+  "@lockPrivateSubtitle": {
+    "description": "Subtitle on the lock banner explaining the need to log in."
+  },
+  "lockGoToLogin": "Pergi ke Log Masuk",
+  "@lockGoToLogin": {
+    "description": "Button label on lock banner to navigate to the login page."
+  },
+
+  "visibilityPrivate": "Peribadi",
+  "@visibilityPrivate": {
+    "description": "Badge label indicating content is private."
+  },
+  "visibilityPublic": "Umum",
+  "@visibilityPublic": {
+    "description": "Badge label indicating content is public."
+  },
+
+  "notFound404": "404 — Tiada",
+  "@notFound404": {
+    "description": "Main text for generic 404 page."
+  },
+  "notFoundGeneric": "Tidak dijumpai",
+  "@notFoundGeneric": {
+    "description": "Generic 'not found' message for various detail pages."
+  },
+  "notFoundPage": "Halaman tidak dijumpai",
+  "@notFoundPage": {
+    "description": "Message when a page slug is not found."
+  },
+  "metaDisabled": "Ruang meta dimatikan.",
+  "@metaDisabled": {
+    "description": "Message shown when the meta realm/section has been disabled in config."
+  },
+
+  "workSectionTitle": "Kerja",
+  "@workSectionTitle": {
+    "description": "Main title for the Work index page."
+  },
+  "workSectionSubtitle": "Projek dan eksperimen makmal",
+  "@workSectionSubtitle": {
+    "description": "Subtitle for the Work index page."
+  },
+  "workFilterAll": "Semua",
+  "@workFilterAll": {
+    "description": "Work filter label: show all work items."
+  },
+  "workFilterProjects": "Projek",
+  "@workFilterProjects": {
+    "description": "Work filter label: show projects only."
+  },
+  "workFilterLabs": "Makmal",
+  "@workFilterLabs": {
+    "description": "Work filter label: show lab items only."
+  },
+  "workFilterProducts": "Produk",
+  "@workFilterProducts": {
+    "description": "Work filter label: show product/template items only."
+  },
+  "workEmpty": "Belum ada item.",
+  "@workEmpty": {
+    "description": "Message shown when there are no work items."
+  },
+
+  "blogSectionSubtitle": "Catatan gunaan tentang kejuruteraan, penilaian, dan sistem tenang.",
+  "@blogSectionSubtitle": {
+    "description": "Subtitle for the Blog index page."
+  },
+  "blogEmpty": "Belum ada entri blog.",
+  "@blogEmpty": {
+    "description": "Message shown when there are no blog posts."
+  },
+  "blogFilterAll": "Semua entri",
+  "@blogFilterAll": {
+    "description": "Blog filter label: show all posts."
+  },
+
+  "librarySectionSubtitle": "Input kepada pemikiran saya: bacaan, alat, liputan media, dan nota kajian.",
+  "@librarySectionSubtitle": {
+    "description": "Subtitle for the Library index page."
+  },
+  "libraryEmpty": "Belum ada entri perpustakaan.",
+  "@libraryEmpty": {
+    "description": "Message shown when there are no library items."
+  },
+  "libraryFilterAll": "Semua entri",
+  "@libraryFilterAll": {
+    "description": "Library filter label: show all entries."
+  },
+
+  "peopleSectionSubtitle": "Pemikir, mentor, dan pengaruh di sebalik kerja saya.",
+  "@peopleSectionSubtitle": {
+    "description": "Subtitle for the People index page."
+  },
+  "peopleEmpty": "Belum ada profil tokoh.",
+  "@peopleEmpty": {
+    "description": "Message shown when there are no people profiles."
+  },
+  "peopleFilterAll": "Semua tokoh",
+  "@peopleFilterAll": {
+    "description": "People filter label: show all profiles."
+  },
+
+  "philosophySectionSubtitle": "Sistem dalaman: minda, tubuh, etika, arketip, amalan.",
+  "@philosophySectionSubtitle": {
+    "description": "Subtitle for the philosophy/meta index page."
+  },
+  "philosophyEmpty": "Belum ada nota falsafah diterbitkan.",
+  "@philosophyEmpty": {
+    "description": "Message shown when there are no philosophy notes."
+  },
+
+  "timelineSubtitle": "Pencapaian & kemas kini penting",
+  "@timelineSubtitle": {
+    "description": "Subtitle for the timeline page header."
+  },
+  "timelineEmpty": "Belum ada catatan garis masa.",
+  "@timelineEmpty": {
+    "description": "Message shown when there are no timeline entries."
+  },
+
+  "contactSectionSubtitle": "Hubungi saya",
+  "@contactSectionSubtitle": {
+    "description": "Subtitle shown under Contact page header",
+    "type": "text"
+  },
+  "contactIntro": "Saya membaca semua emel sendiri dan lebih suka komunikasi yang tenang dan terus. Sama ada anda ingin berbincang tentang projek, menjemput saya memberi ceramah, atau sekadar berkongsi idea, mesej ringkas dengan konteks adalah permulaan terbaik.",
+  "@contactIntro": {
+    "description": "Intro paragraph at top of Contact page",
+    "type": "text"
+  },
+  "contactPrimaryTitle": "Cara utama untuk menghubungi",
+  "@contactPrimaryTitle": {
+    "description": "Title for main contact card",
+    "type": "text"
+  },
+  "contactPrimaryDescription": "Untuk kebanyakan perkara — konsultansi, kolaborasi, atau soalan mengenai kerja saya — emel ialah cara paling mudah untuk berhubung. Jika anda lebih selesa berbual secara langsung, anda boleh menjadualkan panggilan pendek.",
+  "@contactPrimaryDescription": {
+    "description": "Description explaining how people should contact you",
+    "type": "text"
+  },
+  "contactPrimaryButtonEmail": "hello@desmondliew.dev",
+  "@contactPrimaryButtonEmail": {
+    "description": "Button label for email address",
+    "type": "text"
+  },
+  "contactPrimaryButtonCall": "Tempah panggilan 15 minit",
+  "@contactPrimaryButtonCall": {
+    "description": "Button label for scheduling a call via Calendly",
+    "type": "text"
+  },
+  "contactPrimaryLanguages": "Bahasa: English · 中文 · Bahasa Malaysia",
+  "@contactPrimaryLanguages": {
+    "description": "Language availability display",
+    "type": "text"
+  },
+  "contactOfficeHoursLabel": "Waktu bekerja",
+  "@contactOfficeHoursLabel": {
+    "description": "Label for office hours section",
+    "type": "text"
+  },
+  "contactOfficeHoursValue": "Isnin – Jumaat · 9:00 – 15:00",
+  "@contactOfficeHoursValue": {
+    "description": "Value for office hours",
+    "type": "text"
+  },
+  "contactTimezoneLabel": "Zon masa",
+  "@contactTimezoneLabel": {
+    "description": "Label for timezone",
+    "type": "text"
+  },
+  "contactTimezoneValue": "Malaysia / Singapura (GMT+8)",
+  "@contactTimezoneValue": {
+    "description": "Displayed timezone",
+    "type": "text"
+  },
+  "contactResponseTime": "Kebiasaannya membalas dalam 1–2 hari",
+  "@contactResponseTime": {
+    "description": "Expected response time",
+    "type": "text"
+  },
+  "contactPrivacyTitle": "Privasi & batasan",
+  "@contactPrivacyTitle": {
+    "description": "Title for privacy and boundaries section",
+    "type": "text"
+  },
+  "contactPrivacyNote": "Semua komunikasi dikendalikan oleh saya sendiri dan tidak akan dikongsi dengan pihak ketiga.",
+  "@contactPrivacyNote": {
+    "description": "General privacy guarantee statement",
+    "type": "text"
+  },
+  "contactPrivacyWarning": "Untuk mesej pertama, penerangan ringkas sudah memadai. Elakkan berkongsi maklumat peribadi sensitif atau data sulit pelanggan.",
+  "@contactPrivacyWarning": {
+    "description": "Warning to avoid sending sensitive data",
+    "type": "text"
+  },
+  "contactPrivacyEthics": "Saya tidak menerima projek yang melibatkan alat pengawasan, dark patterns, atau pengambilan data tanpa pengetahuan pengguna.",
+  "@contactPrivacyEthics": {
+    "description": "Ethical boundaries for unacceptable work",
+    "type": "text"
+  },
+
+  "testimonialsSectionTitle": "Testimoni",
+  "@testimonialsSectionTitle": {
+    "description": "Title for testimonials card",
+    "type": "text"
+  },
+  "testimonialsSectionSubtitle": "Catatan ringkas daripada rakan kerjasama dan klien",
+  "@testimonialsSectionSubtitle": {
+    "description": "Subtitle for testimonials card",
+    "type": "text"
+  },
+  "contactTestimonialDescription": "Jika anda ingin memahami cara saya bekerja dengan pasukan, anda boleh membaca beberapa catatan daripada rakan kerjasama dan klien.",
+  "@contactTestimonialDescription": {
+    "description": "Description explaining what testimonials contain",
+    "type": "text"
+  },
+  "contactTestimonialButton": "Lihat testimoni",
+  "@contactTestimonialButton": {
+    "description": "Button to open testimonials page",
+    "type": "text"
+  },
+
+  "contactAccessibilityTitle": "Aksesibiliti",
+  "@contactAccessibilityTitle": {
+    "description": "Title for accessibility notes",
+    "type": "text"
+  },
+  "contactAccessibilityNote": "Jika anda mempunyai keperluan aksesibiliti tertentu — seperti komunikasi bertulis sahaja, kapsyen untuk panggilan, atau alat alternatif — beritahu saya dalam mesej. Saya akan cuba menyesuaikan keperluan anda.",
+  "@contactAccessibilityNote": {
+    "description": "Accessibility statement for communication",
+    "type": "text"
+  }
+}

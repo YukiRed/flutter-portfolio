@@ -1,54 +1,63 @@
 name: Build & Deploy Flutter Web to GitHub Pages
 
 on:
-    push:
-        branches: [main]
-    workflow_dispatch:
+  push:
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
-    contents: read
-    pages: write
-    id-token: write
+  contents: read
+  pages: write
+  id-token: write
 
 env:
-    FLUTTER_VERSION: "stable"
+  FLUTTER_VERSION: "stable"
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive # pulls Portfolio-Contents into /assets
+          fetch-depth: 0
 
-            - name: Setup Flutter
-              uses: subosito/flutter-action@v2
-              with:
-                  channel: ${{ env.FLUTTER_VERSION }}
-                  cache: true
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: ${{ env.FLUTTER_VERSION }}
+          cache: true
 
-            - name: Install dependencies
-              run: flutter pub get
+      - name: Install dependencies
+        run: flutter pub get
 
-            - name: Setup Pages
-              id: pages
-              uses: actions/configure-pages@v5
+      - name: (Optional) Generate sitemap & RSS
+        run: |
+          dart run lib/tools/gen_sitemap.dart || true
+          dart run lib/tools/gen_rss.dart || true
 
-            - name: Build web (correct base path)
-              run: |
-                  flutter build web --release --base-href "${{ steps.pages.outputs.base_path }}/"
-                  cp build/web/index.html build/web/404.html
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
 
-            - name: Upload artifact
-              uses: actions/upload-pages-artifact@v3
-              with:
-                  path: ./build/web
+      - name: Build web (correct base path)
+        run: |
+          flutter build web --release --base-href "${{ steps.pages.outputs.base_path }}/"
+          # 404 fallback for client-side routing
+          cp build/web/index.html build/web/404.html
 
-    deploy:
-        needs: build
-        runs-on: ubuntu-latest
-        environment:
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
-        steps:
-            - name: Deploy to GitHub Pages
-              id: deployment
-              uses: actions/deploy-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./build/web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,439 @@
+{
+  "@@locale": "zh",
+  "@@last_modified": "Chinese localization with full metadata",
+
+  "appTitle": "Desmond Liew — 作品集",
+  "@appTitle": {
+    "description": "Application title shown in window title / browser tab."
+  },
+  "navHome": "首页",
+  "@navHome": {
+    "description": "Top navigation: link to the home page."
+  },
+  "navProjects": "项目",
+  "@navProjects": {
+    "description": "Top navigation: link to the projects listing."
+  },
+  "navBlog": "博客",
+  "@navBlog": {
+    "description": "Top navigation: link to the blog index."
+  },
+  "navLabs": "实验室",
+  "@navLabs": {
+    "description": "Top navigation: link to the labs index."
+  },
+  "navLibrary": "文库",
+  "@navLibrary": {
+    "description": "Top navigation: link to the library / learning archive."
+  },
+  "navDiscover": "探索",
+  "@navDiscover": {
+    "description": "Top navigation: label for the Discover menu (blog, library, people)."
+  },
+  "navPhilosophy": "哲学",
+  "@navPhilosophy": {
+    "description": "Top navigation: link to the philosophy/meta realm."
+  },
+  "navFoundation": "基础",
+  "@navFoundation": {
+    "description": "Top navigation: link to the foundation section."
+  },
+  "navTimeline": "时间线",
+  "@navTimeline": {
+    "description": "Top navigation: link to the timeline page."
+  },
+  "navServices": "服务",
+  "@navServices": {
+    "description": "Top navigation: link to the services page."
+  },
+  "navResume": "简历",
+  "@navResume": {
+    "description": "Top navigation: link to the resume/CV page."
+  },
+  "navLogin": "登录",
+  "@navLogin": {
+    "description": "Top navigation: link to the login/unlock page."
+  },
+  "navWork": "工作",
+  "@navWork": {
+    "description": "Top navigation: label for the Work menu (projects, labs, products)."
+  },
+  "navAbout": "关于",
+  "@navAbout": {
+    "description": "Top navigation: label for the About menu."
+  },
+  "navPeople": "人物",
+  "@navPeople": {
+    "description": "Top navigation: link to the people index."
+  },
+  "navCredits": "致谢",
+  "@navCredits": {
+    "description": "Top navigation: link to the credits/thanks page."
+  },
+  "navLogout": "退出登录",
+  "@navLogout": {
+    "description": "Top navigation or drawer: button to log out / clear passphrase."
+  },
+  "navContact": "联系",
+  "@navContact": {
+    "description": "Navigation label for Contact page",
+    "type": "text"
+  },
+
+  "menuTheme": "主题",
+  "@menuTheme": {
+    "description": "Tooltip/title for the theme popup menu."
+  },
+  "menuThemeMode": "主题模式",
+  "@menuThemeMode": {
+    "description": "Label inside theme popup for choosing light/dark/system."
+  },
+  "themeSystem": "系统",
+  "@themeSystem": {
+    "description": "Theme mode: follow the device/system setting."
+  },
+  "themeLight": "浅色",
+  "@themeLight": {
+    "description": "Theme mode: light theme."
+  },
+  "themeDark": "深色",
+  "@themeDark": {
+    "description": "Theme mode: dark theme."
+  },
+
+  "menuPalette": "配色",
+  "@menuPalette": {
+    "description": "Label for choosing a color palette."
+  },
+  "paletteMetal": "金",
+  "@paletteMetal": {
+    "description": "Name of the 'metal' color palette."
+  },
+  "paletteEarth": "土",
+  "@paletteEarth": {
+    "description": "Name of the 'earth' color palette."
+  },
+  "paletteWood": "木",
+  "@paletteWood": {
+    "description": "Name of the 'wood' color palette."
+  },
+  "paletteFire": "火",
+  "@paletteFire": {
+    "description": "Name of the 'fire' color palette."
+  },
+  "paletteWater": "水",
+  "@paletteWater": {
+    "description": "Name of the 'water' color palette."
+  },
+
+  "paletteYin": "阴",
+  "@paletteYin": { "description": "“阴”配色方案名称。" },
+  "paletteYang": "阳",
+  "@paletteYang": { "description": "“阳”配色方案名称。" },
+  "paletteAbyss": "深渊",
+  "@paletteAbyss": { "description": "“深渊”配色方案名称。" },
+  "paletteLunar": "月影",
+  "@paletteLunar": { "description": "“月影”配色方案名称。" },
+  "paletteStorm": "风暴",
+  "@paletteStorm": { "description": "“风暴”配色方案名称。" },
+  "paletteNatural": "自然",
+  "@paletteNatural": { "description": "“自然”配色方案名称。" },
+  "paletteMinimal": "极简",
+  "@paletteMinimal": { "description": "“极简”配色方案名称。" },
+  "paletteMono": "单色",
+  "@paletteMono": { "description": "“单色”配色方案名称。" },
+
+
+  "menuLanguage": "语言",
+  "@menuLanguage": {
+    "description": "Tooltip/title for the language selection popup."
+  },
+  "langEnglish": "English",
+  "@langEnglish": {
+    "description": "Language choice: English."
+  },
+  "langChinese": "中文",
+  "@langChinese": {
+    "description": "Language choice: Chinese."
+  },
+  "langMalay": "Bahasa Melayu",
+  "@langMalay": {
+    "description": "Language choice: Malay."
+  },
+
+  "homeTagline": "应用型 AI 工程师 · 系统架构师",
+  "@homeTagline": {
+    "description": "Tagline shown on the home page hero."
+  },
+
+  "authUnlockTitle": "输入口令以解锁私密内容",
+  "@authUnlockTitle": {
+    "description": "Headline on the login/unlock page."
+  },
+  "authPassphraseLabel": "口令",
+  "@authPassphraseLabel": {
+    "description": "Label for the passphrase text field."
+  },
+  "authUnlockButton": "解锁",
+  "@authUnlockButton": {
+    "description": "Button label to unlock private content."
+  },
+  "authAlreadyLoggedInTitle": "已登录。",
+  "@authAlreadyLoggedInTitle": {
+    "description": "Title shown when the user is already authenticated."
+  },
+  "authAlreadyLoggedInBody": "私密内容已可见。\n口令只保存在本地，直到你退出登录。",
+  "@authAlreadyLoggedInBody": {
+    "description": "Body text explaining that private items are visible and passphrase is stored locally."
+  },
+  "authWrongPassphrase": "口令错误",
+  "@authWrongPassphrase": {
+    "description": "Snackbar message when passphrase validation fails."
+  },
+  "authUnlockSuccess": "解锁成功——私密内容将会显示。",
+  "@authUnlockSuccess": {
+    "description": "Snackbar message when unlocking succeeds."
+  },
+  "authCanaryTip": "提示：你可以在 .env 中配置可选 canary，用来立即校验口令。",
+  "@authCanaryTip": {
+    "description": "Small helper text on the login page explaining the canary mechanism."
+  },
+
+  "lockPrivateTitle": "此内容为私密内容。",
+  "@lockPrivateTitle": {
+    "description": "Title on the lock banner when content is private."
+  },
+  "lockPrivateSubtitle": "请登录并输入口令以查看。",
+  "@lockPrivateSubtitle": {
+    "description": "Subtitle on the lock banner explaining the need to log in."
+  },
+  "lockGoToLogin": "前往登录",
+  "@lockGoToLogin": {
+    "description": "Button label on lock banner to navigate to the login page."
+  },
+
+  "visibilityPrivate": "私密",
+  "@visibilityPrivate": {
+    "description": "Badge label indicating content is private."
+  },
+  "visibilityPublic": "公开",
+  "@visibilityPublic": {
+    "description": "Badge label indicating content is public."
+  },
+
+  "notFound404": "404 — 未找到",
+  "@notFound404": {
+    "description": "Main text for generic 404 page."
+  },
+  "notFoundGeneric": "未找到",
+  "@notFoundGeneric": {
+    "description": "Generic 'not found' message for various detail pages."
+  },
+  "notFoundPage": "页面不存在",
+  "@notFoundPage": {
+    "description": "Message when a page slug is not found."
+  },
+  "metaDisabled": "Meta 领域已关闭。",
+  "@metaDisabled": {
+    "description": "Message shown when the meta realm/section has been disabled in config."
+  },
+
+  "workSectionTitle": "工作",
+  "@workSectionTitle": {
+    "description": "Main title for the Work index page."
+  },
+  "workSectionSubtitle": "项目与实验室探索",
+  "@workSectionSubtitle": {
+    "description": "Subtitle for the Work index page."
+  },
+  "workFilterAll": "全部",
+  "@workFilterAll": {
+    "description": "Work filter label: show all work items."
+  },
+  "workFilterProjects": "项目",
+  "@workFilterProjects": {
+    "description": "Work filter label: show projects only."
+  },
+  "workFilterLabs": "实验",
+  "@workFilterLabs": {
+    "description": "Work filter label: show lab items only."
+  },
+  "workFilterProducts": "产品",
+  "@workFilterProducts": {
+    "description": "Work filter label: show product/template items only."
+  },
+  "workEmpty": "暂时还没有条目。",
+  "@workEmpty": {
+    "description": "Message shown when there are no work items."
+  },
+
+  "blogSectionSubtitle": "关于工程、评估与静谧系统的应用型笔记。",
+  "@blogSectionSubtitle": {
+    "description": "Subtitle for the Blog index page."
+  },
+  "blogEmpty": "暂时还没有博客文章。",
+  "@blogEmpty": {
+    "description": "Message shown when there are no blog posts."
+  },
+  "blogFilterAll": "全部文章",
+  "@blogFilterAll": {
+    "description": "Blog filter label: show all posts."
+  },
+
+  "librarySectionSubtitle": "支撑我思考的输入：阅读、工具、媒体报道与研究笔记。",
+  "@librarySectionSubtitle": {
+    "description": "Subtitle for the Library index page."
+  },
+  "libraryEmpty": "暂时还没有文库条目。",
+  "@libraryEmpty": {
+    "description": "Message shown when there are no library items."
+  },
+  "libraryFilterAll": "全部条目",
+  "@libraryFilterAll": {
+    "description": "Library filter label: show all entries."
+  },
+
+  "peopleSectionSubtitle": "构成我知识谱系的思想家、导师与影响者。",
+  "@peopleSectionSubtitle": {
+    "description": "Subtitle for the People index page."
+  },
+  "peopleEmpty": "暂时还没有人物档案。",
+  "@peopleEmpty": {
+    "description": "Message shown when there are no people profiles."
+  },
+  "peopleFilterAll": "所有人物",
+  "@peopleFilterAll": {
+    "description": "People filter label: show all profiles."
+  },
+
+  "philosophySectionSubtitle": "内在操作系统：心智、身体、伦理、原型、实践。",
+  "@philosophySectionSubtitle": {
+    "description": "Subtitle for the philosophy/meta index page."
+  },
+  "philosophyEmpty": "暂时还没有发布哲学笔记。",
+  "@philosophyEmpty": {
+    "description": "Message shown when there are no philosophy notes."
+  },
+
+  "timelineSubtitle": "里程碑与重要更新",
+  "@timelineSubtitle": {
+    "description": "Subtitle for the timeline page header."
+  },
+  "timelineEmpty": "暂时还没有时间线条目。",
+  "@timelineEmpty": {
+    "description": "Message shown when there are no timeline entries."
+  },
+
+  "contactSectionSubtitle": "保持联系",
+  "@contactSectionSubtitle": {
+    "description": "Subtitle shown under Contact page header",
+    "type": "text"
+  },
+  "contactIntro": "我亲自阅读每一封邮件，也偏好安静、直接的沟通方式。无论你是想探讨项目、邀请演讲，或只是想交流一个想法，简单清晰的背景信息就是很好的开始。",
+  "@contactIntro": {
+    "description": "Intro paragraph at top of Contact page",
+    "type": "text"
+  },
+  "contactPrimaryTitle": "主要联系方式",
+  "@contactPrimaryTitle": {
+    "description": "Title for main contact card",
+    "type": "text"
+  },
+  "contactPrimaryDescription": "大多数合作—咨询、技术交流、对我工作有问题—都可以直接通过邮件联系。如果你更喜欢实时沟通，也可以预约一个简短的通话。",
+  "@contactPrimaryDescription": {
+    "description": "Description explaining how people should contact you",
+    "type": "text"
+  },
+  "contactPrimaryButtonEmail": "hello@desmondliew.dev",
+  "@contactPrimaryButtonEmail": {
+    "description": "Button label for email address",
+    "type": "text"
+  },
+  "contactPrimaryButtonCall": "预约 15 分钟通话",
+  "@contactPrimaryButtonCall": {
+    "description": "Button label for scheduling a call via Calendly",
+    "type": "text"
+  },
+  "contactPrimaryLanguages": "可用语言：English · 中文 · Bahasa Malaysia",
+  "@contactPrimaryLanguages": {
+    "description": "Language availability display",
+    "type": "text"
+  },
+  "contactOfficeHoursLabel": "工作时间",
+  "@contactOfficeHoursLabel": {
+    "description": "Label for office hours section",
+    "type": "text"
+  },
+  "contactOfficeHoursValue": "周一至周五 · 9:00 – 15:00",
+  "@contactOfficeHoursValue": {
+    "description": "Value for office hours",
+    "type": "text"
+  },
+  "contactTimezoneLabel": "时区",
+  "@contactTimezoneLabel": {
+    "description": "Label for timezone",
+    "type": "text"
+  },
+  "contactTimezoneValue": "马来西亚 / 新加坡（GMT+8）",
+  "@contactTimezoneValue": {
+    "description": "Displayed timezone",
+    "type": "text"
+  },
+  "contactResponseTime": "通常在 1–2 天内回复",
+  "@contactResponseTime": {
+    "description": "Expected response time",
+    "type": "text"
+  },
+  "contactPrivacyTitle": "隐私与界限",
+  "@contactPrivacyTitle": {
+    "description": "Title for privacy and boundaries section",
+    "type": "text"
+  },
+  "contactPrivacyNote": "所有沟通均由我本人亲自处理，不会与任何第三方共享邮件或细节。",
+  "@contactPrivacyNote": {
+    "description": "General privacy guarantee statement",
+    "type": "text"
+  },
+  "contactPrivacyWarning": "首次联系时提供高层次描述即可，请避免发送敏感个人信息或机密客户资料。",
+  "@contactPrivacyWarning": {
+    "description": "Warning to avoid sending sensitive data",
+    "type": "text"
+  },
+  "contactPrivacyEthics": "我不接受涉及监控工具、欺骗性设计（dark patterns）或隐蔽数据抓取的项目。",
+  "@contactPrivacyEthics": {
+    "description": "Ethical boundaries for unacceptable work",
+    "type": "text"
+  },
+
+  "testimonialsSectionTitle": "推荐语",
+  "@testimonialsSectionTitle": {
+    "description": "Title for testimonials card",
+    "type": "text"
+  },
+  "testimonialsSectionSubtitle": "来自合作伙伴与客户的简短评价",
+  "@testimonialsSectionSubtitle": {
+    "description": "Subtitle for testimonials card",
+    "type": "text"
+  },
+  "contactTestimonialDescription": "如果你想了解我如何与团队合作，可以阅读一些来自合作伙伴与客户的简短评价。",
+  "@contactTestimonialDescription": {
+    "description": "Description explaining what testimonials contain",
+    "type": "text"
+  },
+  "contactTestimonialButton": "查看推荐语",
+  "@contactTestimonialButton": {
+    "description": "Button to open testimonials page",
+    "type": "text"
+  },
+
+  "contactAccessibilityTitle": "无障碍支持",
+  "@contactAccessibilityTitle": {
+    "description": "Title for accessibility notes",
+    "type": "text"
+  },
+  "contactAccessibilityNote": "如果你在沟通上有特定的无障碍需求——例如仅文字沟通、通话字幕、或其他辅助方式——请在信息中说明，我会尽力配合。",
+  "@contactAccessibilityNote": {
+    "description": "Accessibility statement for communication",
+    "type": "text"
+  }
+}
