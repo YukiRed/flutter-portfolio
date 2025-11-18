@@ -2,7 +2,8 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:cryptography/cryptography.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+
+import '../../app/config.dart';
 
 /// Client-side “login”:
 /// - Stores a passphrase locally (shared_preferences → localStorage on web).
@@ -39,16 +40,10 @@ class AuthService extends ChangeNotifier {
   /// Optional: validates a passphrase against a local canary in .env.
   /// Returns true if no canary is configured.
   Future<bool> validatePassphrase(String passphrase) async {
-    final saltB64 = dotenv.maybeGet('AUTH_CANARY_SALT');
-    final nonceB64 = dotenv.maybeGet('AUTH_CANARY_NONCE');
-    final dataB64 = dotenv.maybeGet('AUTH_CANARY_DATA');
-    final macB64 = dotenv.maybeGet('AUTH_CANARY_MAC'); // <-- NEW
-    if (saltB64 == null ||
-        nonceB64 == null ||
-        dataB64 == null ||
-        macB64 == null) {
-      return true; // no canary configured → accept
-    }
+    final saltB64 = AppConfig.authCanarySalt;
+    final nonceB64 = AppConfig.authCanaryNonce;
+    final dataB64 = AppConfig.authCanaryData;
+    final macB64 = AppConfig.authCanaryMac;
 
     try {
       final salt = base64Decode(saltB64);

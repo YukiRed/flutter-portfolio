@@ -29,7 +29,6 @@ class _PortfolioAppState extends State<PortfolioApp> {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        Provider<AppConfig>(create: (_) => AppConfig.fromEnv()),
         ChangeNotifierProvider<AuthService>(create: (_) => AuthService()),
         ChangeNotifierProvider<ContentService>(create: (_) => ContentService()),
         ChangeNotifierProvider<ThemeController>(
@@ -49,7 +48,6 @@ class _PortfolioAppState extends State<PortfolioApp> {
           if (!_ranPostFrameInit) {
             _ranPostFrameInit = true;
             WidgetsBinding.instance.addPostFrameCallback((_) async {
-              final cfg = context.read<AppConfig>();
               final tc = context.read<ThemeController>();
               final lang = context.read<LanguageController>();
               final auth = context.read<AuthService>();
@@ -61,10 +59,12 @@ class _PortfolioAppState extends State<PortfolioApp> {
               final hasMode = prefs.containsKey('theme.mode');
 
               if (!hasPalette) {
-                await tc.setPalette(_parsePalette(cfg.initialPaletteName));
+                await tc.setPalette(
+                  _parsePalette(AppConfig.defaultThemePalette),
+                );
               }
               if (!hasMode) {
-                await tc.setMode(_parseMode(cfg.initialModeName));
+                await tc.setMode(_parseMode(AppConfig.defaultThemeMode));
               }
             });
           }

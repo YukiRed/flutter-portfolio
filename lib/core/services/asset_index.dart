@@ -1,17 +1,15 @@
-import 'dart:convert';
-import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter/services.dart';
 
 Future<List<String>> listMarkdownAssets() async {
-  final manifest = await rootBundle.loadString('AssetManifest.json');
-  final map = json.decode(manifest) as Map<String, dynamic>;
-  final all = map.keys.cast<String>();
+  final assetManifest = await AssetManifest.loadFromAssetBundle(rootBundle);
+  final allAssets = assetManifest.listAssets();
 
-  // Only index canonical English content
-  final md = all
-      .where((p) => p.startsWith('assets/contents/en/'))
-      .where((p) => p.endsWith('.md'))
+  // Filter for English Markdown files
+  final markdownFiles = allAssets
+      .where((path) => path.startsWith('assets/contents/en/'))
+      .where((path) => path.endsWith('.md'))
       .toList();
 
-  md.sort();
-  return md;
+  markdownFiles.sort();
+  return markdownFiles;
 }

@@ -33,6 +33,11 @@ jobs:
         run: flutter pub get
 
       - name: Build Android APK (release)
+        env:
+          AUTH_CANARY_SALT: ${{ secrets.AUTH_CANARY_SALT }}
+          AUTH_CANARY_NONCE: ${{ secrets.AUTH_CANARY_NONCE }}
+          AUTH_CANARY_DATA: ${{ secrets.AUTH_CANARY_DATA }}
+          AUTH_CANARY_MAC: ${{ secrets.AUTH_CANARY_MAC }}
         run: flutter build apk --release
 
       - name: Archive APK
@@ -66,6 +71,11 @@ jobs:
         run: flutter pub get
 
       - name: Build Linux (release)
+        env:
+          AUTH_CANARY_SALT: ${{ secrets.AUTH_CANARY_SALT }}
+          AUTH_CANARY_NONCE: ${{ secrets.AUTH_CANARY_NONCE }}
+          AUTH_CANARY_DATA: ${{ secrets.AUTH_CANARY_DATA }}
+          AUTH_CANARY_MAC: ${{ secrets.AUTH_CANARY_MAC }}
         run: flutter build linux --release
 
       - name: Archive Linux bundle
@@ -101,6 +111,11 @@ jobs:
 
       - name: Build Windows (release)
         shell: bash
+        env:
+          AUTH_CANARY_SALT: ${{ secrets.AUTH_CANARY_SALT }}
+          AUTH_CANARY_NONCE: ${{ secrets.AUTH_CANARY_NONCE }}
+          AUTH_CANARY_DATA: ${{ secrets.AUTH_CANARY_DATA }}
+          AUTH_CANARY_MAC: ${{ secrets.AUTH_CANARY_MAC }}
         run: flutter build windows --release
 
       - name: Zip Windows bundle

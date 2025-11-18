@@ -192,13 +192,13 @@ body: |
 Encrypt plaintext:
 
 ```
-dart run lib/tools/encrypt_markdown.dart
+dart run tools/encrypt_markdown.dart
 ```
 
 Canary generator:
 
 ```
-dart run lib/tools/gen_canary.dart "your-passphrase"
+dart run tools/gen_canary.dart "your-passphrase"
 ```
 
 ---

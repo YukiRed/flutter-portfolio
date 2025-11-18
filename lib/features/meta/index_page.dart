@@ -38,8 +38,7 @@ class _MetaIndexPageState extends State<MetaIndexPage> {
 
   @override
   Widget build(BuildContext context) {
-    final cfg = context.read<AppConfig>();
-    if (!cfg.showMeta) {
+    if (AppConfig.showMetaRealm) {
       return Center(child: Text(context.l10n.metaDisabled));
     }
 
@@ -125,7 +124,7 @@ List<String> _derivePhilosophyCategories(List<ContentMeta> items) {
 String _labelForCategory(String tag) {
   final raw = tag.split(':').last;
   return raw
-      .split(RegExp(r'[-_]'))
+      .split(r'[-_]')
       .map((p) => p.isEmpty ? '' : p[0].toUpperCase() + p.substring(1))
       .join(' ')
       .trim();

@@ -16,7 +16,6 @@ class Shell extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cfg = context.read<AppConfig>();
     final auth = context.watch<AuthService>();
 
     final width = MediaQuery.of(context).size.width;
@@ -111,7 +110,7 @@ class Shell extends StatelessWidget {
                   },
                 ),
 
-                if (cfg.showMeta)
+                if (AppConfig.showMetaRealm)
                   _nav(context, '/meta', context.l10n.navPhilosophy),
 
                 _nav(context, '/timeline', context.l10n.navTimeline),
@@ -171,7 +170,9 @@ class Shell extends StatelessWidget {
                 const SizedBox(width: 8),
               ],
       ),
-      drawer: isCompact ? _MobileDrawer(showMeta: cfg.showMeta) : null,
+      drawer: isCompact
+          ? _MobileDrawer(showMeta: AppConfig.showMetaRealm)
+          : null,
       body: MediaQuery.withClampedTextScaling(
         minScaleFactor: 1.0,
         maxScaleFactor: 1.4,

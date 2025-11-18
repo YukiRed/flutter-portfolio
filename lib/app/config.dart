@@ -1,54 +1,49 @@
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'dart:io';
 
 class AppConfig {
-  final String siteName;
-  final String tagline;
-  final String timezone;
-  final bool enableSearch;
-  final bool enableNewsletter;
-  final bool showMeta;
-  final bool showCreative;
-  final bool useHashRouter;
-  final String basePath;
+  // --- 公开配置（硬编码，无需环境变量）---
+  static const String siteName = "Desmond Liew — Portfolio";
+  static const String siteTagline = "Calm, privacy-first AI systems.";
+  static const String contactEmail = "hello@example.com";
+  static const String timezone = "Asia/Kuching";
 
-  // metal|earth|wood|fire|water|yin|yang|abyss|lunar|storm|natural|minimal|mono
-  final String initialPaletteName;
-  final String initialModeName; // system|light|dark
+  // 功能开关
+  static const bool enableSearch = true;
+  static const bool enableNewsletter = false;
+  static const bool showMetaRealm = true;
+  static const bool showCreativeRealm = true;
 
-  const AppConfig({
-    required this.siteName,
-    required this.tagline,
-    required this.timezone,
-    required this.enableSearch,
-    required this.enableNewsletter,
-    required this.showMeta,
-    required this.showCreative,
-    required this.useHashRouter,
-    required this.basePath,
-    required this.initialPaletteName,
-    required this.initialModeName,
-  });
+  // 路由配置
+  static const bool useHashRouter = true;
+  static const String basePath = "";
 
-  factory AppConfig.fromEnv() {
-    String s(String key, String def) => (dotenv.maybeGet(key) ?? def).trim();
+  // 默认主题
+  static const String defaultThemePalette =
+      "wood"; // metal|earth|wood|fire|water等
+  static const String defaultThemeMode = "system";
 
-    bool b(String key, bool def) {
-      final v = s(key, def ? 'true' : 'false').toLowerCase();
-      return v == 'true' || v == '1' || v == 'yes';
-    }
+  // --- 敏感配置（从环境变量读取）---
+  static String get authCanarySalt {
+    // return "Vdc5Cq7nQf6REKpXvwi9Iw==";
+    return Platform.environment['AUTH_CANARY_SALT'] ??
+        (throw Exception("AUTH_CANARY_SALT 环境变量未配置"));
+  }
 
-    return AppConfig(
-      siteName: s('SITE_NAME', 'Desmond Liew — Portfolio'),
-      tagline: s('SITE_TAGLINE', 'Calm, privacy-first AI systems.'),
-      timezone: s('TIMEZONE', 'Asia/Kuching'),
-      enableSearch: b('ENABLE_SEARCH', true),
-      enableNewsletter: b('ENABLE_NEWSLETTER', false),
-      showMeta: b('SHOW_META_REALM', true),
-      showCreative: b('SHOW_CREATIVE_REALM', true),
-      useHashRouter: b('USE_HASH_ROUTER', true),
-      basePath: s('BASE_PATH', ''),
-      initialPaletteName: s('THEME_PALETTE', 'metal').toLowerCase(),
-      initialModeName: s('THEME_MODE', 'system').toLowerCase(),
-    );
+  static String get authCanaryNonce {
+    // return "goCaHaPQyh0lmIAp";
+    return Platform.environment['AUTH_CANARY_NONCE'] ??
+        (throw Exception("AUTH_CANARY_NONCE 环境变量未配置"));
+  }
+
+  static String get authCanaryData {
+    // return "hjQ=";
+    return Platform.environment['AUTH_CANARY_DATA'] ??
+        (throw Exception("AUTH_CANARY_DATA 环境变量未配置"));
+  }
+
+  static String get authCanaryMac {
+    // return "VXb08nJsHtL8JnoBsD4Plg==";
+    return Platform.environment['AUTH_CANARY_MAC'] ??
+        (throw Exception("AUTH_CANARY_MAC 环境变量未配置"));
   }
 }

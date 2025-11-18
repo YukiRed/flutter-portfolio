@@ -43,6 +43,11 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build web (correct base path)
+        env:
+          AUTH_CANARY_SALT: ${{ secrets.AUTH_CANARY_SALT }}
+          AUTH_CANARY_NONCE: ${{ secrets.AUTH_CANARY_NONCE }}
+          AUTH_CANARY_DATA: ${{ secrets.AUTH_CANARY_DATA }}
+          AUTH_CANARY_MAC: ${{ secrets.AUTH_CANARY_MAC }}
         run: |
           flutter build web --release --base-href "${{ steps.pages.outputs.base_path }}/"
           # 404 fallback for client-side routing
