@@ -38,7 +38,7 @@ class _MetaIndexPageState extends State<MetaIndexPage> {
 
   @override
   Widget build(BuildContext context) {
-    if (AppConfig.showMetaRealm) {
+    if (!AppConfig.showMetaRealm) {
       return Center(child: Text(context.l10n.metaDisabled));
     }
 

@@ -66,24 +66,14 @@ Color accentSoftFor(AppPalette p) => switch (p) {
 };
 
 ThemeData _themeFrom(ColorScheme scheme) {
-  // Font families
-  const primary = 'NotoSans';
-  const serifCjk = 'NotoSerifSC';
-  const hanSans = 'NotoSansSC';
-  const symbols2 = 'NotoSansSymbols2';
-  const emoji = 'NotoColorEmoji';
-  const mono = 'JetBrainsMono';
-
   final base = ThemeData(
     useMaterial3: true,
     colorScheme: scheme,
-    fontFamily: primary,
-    fontFamilyFallback: const [hanSans, serifCjk, symbols2, emoji],
     visualDensity: VisualDensity.standard,
     splashFactory: NoSplash.splashFactory,
   );
 
-  final text = _textTheme(base.textTheme, serifCjk, mono);
+  final text = _textTheme(base.textTheme);
 
   return base.copyWith(
     textTheme: text,
@@ -200,7 +190,7 @@ ThemeData _themeFrom(ColorScheme scheme) {
 //  TEXT SYSTEM 2.0 (Replaces Flutter Defaults)
 // ---------------------------
 //
-TextTheme _textTheme(TextTheme base, String serif, String mono) {
+TextTheme _textTheme(TextTheme base) {
   TextStyle tune(
     TextStyle? s, {
     double? size,
@@ -220,64 +210,36 @@ TextTheme _textTheme(TextTheme base, String serif, String mono) {
 
   final t = base;
 
-  return t
-      .copyWith(
-        // High-level display
-        displayLarge: tune(
-          t.displayLarge,
-          family: serif,
-          height: 1.10,
-          weight: FontWeight.w600,
-        ),
-        displayMedium: tune(
-          t.displayMedium,
-          family: serif,
-          height: 1.12,
-          weight: FontWeight.w600,
-        ),
-        displaySmall: tune(
-          t.displaySmall,
-          family: serif,
-          height: 1.12,
-          weight: FontWeight.w600,
-        ),
+  return t.copyWith(
+    // High-level display
+    displayLarge: tune(t.displayLarge, height: 1.10, weight: FontWeight.w600),
+    displayMedium: tune(t.displayMedium, height: 1.12, weight: FontWeight.w600),
+    displaySmall: tune(t.displaySmall, height: 1.12, weight: FontWeight.w600),
 
-        // Page section headings
-        headlineLarge: tune(
-          t.headlineLarge,
-          family: serif,
-          height: 1.15,
-          weight: FontWeight.w600,
-        ),
-        headlineMedium: tune(
-          t.headlineMedium,
-          family: serif,
-          height: 1.18,
-          weight: FontWeight.w600,
-        ),
-        headlineSmall: tune(
-          t.headlineSmall,
-          family: serif,
-          height: 1.20,
-          weight: FontWeight.w600,
-        ),
+    // Page section headings
+    headlineLarge: tune(t.headlineLarge, height: 1.15, weight: FontWeight.w600),
+    headlineMedium: tune(
+      t.headlineMedium,
+      height: 1.18,
+      weight: FontWeight.w600,
+    ),
+    headlineSmall: tune(t.headlineSmall, height: 1.20, weight: FontWeight.w600),
 
-        // Titles (navigation + cards)
-        titleLarge: tune(t.titleLarge, weight: FontWeight.w700, height: 1.24),
-        titleMedium: tune(t.titleMedium, weight: FontWeight.w600, height: 1.28),
-        titleSmall: tune(t.titleSmall, weight: FontWeight.w600, height: 1.30),
+    // Titles (navigation + cards)
+    titleLarge: tune(t.titleLarge, weight: FontWeight.w700, height: 1.24),
+    titleMedium: tune(t.titleMedium, weight: FontWeight.w600, height: 1.28),
+    titleSmall: tune(t.titleSmall, weight: FontWeight.w600, height: 1.30),
 
-        // Body text
-        bodyLarge: tune(t.bodyLarge, height: 1.50),
-        bodyMedium: tune(t.bodyMedium, height: 1.52),
-        bodySmall: tune(t.bodySmall, height: 1.48),
+    // Body text
+    bodyLarge: tune(t.bodyLarge, height: 1.50),
+    bodyMedium: tune(t.bodyMedium, height: 1.52),
+    bodySmall: tune(t.bodySmall, height: 1.48),
 
-        // Labels (buttons, chips)
-        labelLarge: tune(t.labelLarge, weight: FontWeight.w600, height: 1.20),
-        labelMedium: tune(t.labelMedium, weight: FontWeight.w600, height: 1.20),
-        labelSmall: tune(t.labelSmall, weight: FontWeight.w600, height: 1.20),
-      )
-      .apply(fontFamilyFallback: [mono]);
+    // Labels (buttons, chips)
+    labelLarge: tune(t.labelLarge, weight: FontWeight.w600, height: 1.20),
+    labelMedium: tune(t.labelMedium, weight: FontWeight.w600, height: 1.20),
+    labelSmall: tune(t.labelSmall, weight: FontWeight.w600, height: 1.20),
+  );
 }
 
 class ThemeBundle {

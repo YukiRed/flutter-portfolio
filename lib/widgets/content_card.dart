@@ -81,35 +81,40 @@ class ContentCard extends StatelessWidget {
               const SizedBox(width: 12),
               // Texts
               Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // Title + visibility badge
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          child: Text(
-                            title,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: titleStyle,
+                child: SingleChildScrollView(
+                  physics:
+                      const NeverScrollableScrollPhysics(), // Prevent scrolling
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min, // Shrink to fit content
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Title + visibility badge
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: Text(
+                              title,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: titleStyle,
+                            ),
                           ),
-                        ),
-                        const SizedBox(width: 8),
-                        VisibilityBadge(isPrivate: isPrivate),
-                      ],
-                    ),
-                    if (subtitlePieces.isNotEmpty) ...[
-                      const SizedBox(height: 6),
-                      Text(
-                        subtitlePieces.join('  •  '),
-                        maxLines: dense ? 2 : 3,
-                        overflow: TextOverflow.ellipsis,
-                        style: subtitleStyle,
+                          const SizedBox(width: 8),
+                          VisibilityBadge(isPrivate: isPrivate),
+                        ],
                       ),
+                      if (subtitlePieces.isNotEmpty) ...[
+                        const SizedBox(height: 6),
+                        Text(
+                          subtitlePieces.join('  •  '),
+                          maxLines: dense ? 2 : 3,
+                          overflow: TextOverflow.ellipsis,
+                          style: subtitleStyle,
+                        ),
+                      ],
                     ],
-                  ],
+                  ),
                 ),
               ),
             ],

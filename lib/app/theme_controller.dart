@@ -40,6 +40,9 @@ class ThemeController extends ChangeNotifier {
         _mode = ThemeMode.system;
     }
     switch (p.getString(_kPaletteKey)) {
+      case 'metal':
+        _palette = AppPalette.metal;
+        break;
       case 'earth':
         _palette = AppPalette.earth;
         break;
@@ -77,7 +80,7 @@ class ThemeController extends ChangeNotifier {
         _palette = AppPalette.mono;
         break;
       default:
-        _palette = AppPalette.metal;
+        _palette = AppPalette.wood;
     }
 
     notifyListeners();
@@ -98,6 +101,7 @@ class ThemeController extends ChangeNotifier {
     _palette = palette;
     final p = await SharedPreferences.getInstance();
     await p.setString(_kPaletteKey, switch (palette) {
+      AppPalette.metal => 'metal',
       AppPalette.earth => 'earth',
       AppPalette.wood => 'wood',
       AppPalette.fire => 'fire',
@@ -110,7 +114,6 @@ class ThemeController extends ChangeNotifier {
       AppPalette.natural => 'natural',
       AppPalette.minimal => 'minimal',
       AppPalette.mono => 'mono',
-      _ => 'metal',
     });
 
     notifyListeners();
