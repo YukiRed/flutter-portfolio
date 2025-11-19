@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../core/services/auth_service.dart';
-import '../../core/utils/l10n.dart';
+import '../core/utils/l10n.dart';
 
 class VisibilityBadge extends StatelessWidget {
   final bool isPrivate;

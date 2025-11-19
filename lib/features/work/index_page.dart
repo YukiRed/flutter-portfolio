@@ -41,64 +41,64 @@ class _WorkIndexPageState extends State<WorkIndexPage> {
     }
   }
 
+  List<ContentMeta> _sortByDate(List<ContentMeta> list) =>
+      [...list]..sort((a, b) => b.date!.compareTo(a.date!));
+
   Future<void> _load() async {
     setState(() => _loading = true);
     final svc = context.read<ContentService>();
 
-    // Pull all work types, then filter in-memory (cheap; avoids over-coupling).
-    final projects = svc.listByType('project');
-    final labs = svc.listByType('lab');
-    final products = svc.listByType('product');
-
-    final all = <ContentMeta>[...projects, ...labs, ...products]
-      ..sort((a, b) => b.date!.compareTo(a.date!));
+    final projects = _sortByDate(svc.listByType('project'));
+    final labs = _sortByDate(svc.listByType('lab'));
+    final products = _sortByDate(svc.listByType('product'));
+    final all = _sortByDate([...projects, ...labs, ...products]);
 
     setState(() {
-      _items = switch (_filter) {
-        WorkFilter.projects => projects,
-        WorkFilter.labs => labs,
-        WorkFilter.products => products,
-        _ => all,
-      };
+      _applyFilter(
+        projects: projects,
+        labs: labs,
+        products: products,
+        all: all,
+        filter: _filter,
+      );
       _loading = false;
     });
   }
 
   void _setFilter(WorkFilter f) {
     setState(() => _filter = f);
+    // URL updates ...
 
-    // Update URL
-    switch (f) {
-      case WorkFilter.projects:
-        context.go('/work?f=projects');
-        break;
-      case WorkFilter.labs:
-        context.go('/work?f=labs');
-        break;
-      case WorkFilter.products:
-        context.go('/work?f=products');
-        break;
-      default:
-        context.go('/work');
-    }
-
-    // Recalculate items
     final svc = context.read<ContentService>();
-    final projects = svc.listByType('project');
-    final labs = svc.listByType('lab');
-    final products = svc.listByType('product');
-
-    final all = [...projects, ...labs, ...products]
-      ..sort((a, b) => b.date!.compareTo(a.date!));
+    final projects = _sortByDate(svc.listByType('project'));
+    final labs = _sortByDate(svc.listByType('lab'));
+    final products = _sortByDate(svc.listByType('product'));
+    final all = _sortByDate([...projects, ...labs, ...products]);
 
     setState(() {
-      _items = switch (f) {
-        WorkFilter.projects => projects,
-        WorkFilter.labs => labs,
-        WorkFilter.products => products,
-        _ => all,
-      };
+      _applyFilter(
+        projects: projects,
+        labs: labs,
+        products: products,
+        all: all,
+        filter: f,
+      );
     });
+  }
+
+  void _applyFilter({
+    required List<ContentMeta> projects,
+    required List<ContentMeta> labs,
+    required List<ContentMeta> products,
+    required List<ContentMeta> all,
+    required WorkFilter filter,
+  }) {
+    _items = switch (filter) {
+      WorkFilter.projects => projects,
+      WorkFilter.labs => labs,
+      WorkFilter.products => products,
+      _ => all,
+    };
   }
 
   @override
@@ -182,13 +182,18 @@ class _WorkGrid extends StatelessWidget {
         : width >= 800
         ? 2
         : 1;
+
     return GridView.builder(
       itemCount: items.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: cross,
         crossAxisSpacing: 16,
         mainAxisSpacing: 16,
-        childAspectRatio: width >= 1200 ? 5 : 4,
+        childAspectRatio: width >= 1200
+            ? 4.2
+            : width >= 800
+            ? 3.4
+            : 2.7,
       ),
       itemBuilder: (context, i) => ContentCard(meta: items[i]),
     );

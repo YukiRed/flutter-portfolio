@@ -70,6 +70,20 @@ class _TimelineIndexPageState extends State<TimelineIndexPage>
     return FutureBuilder<void>(
       future: svc.ensureLoaded(),
       builder: (context, snapshot) {
+        if (snapshot.connectionState != ConnectionState.done) {
+          return const Center(child: CircularProgressIndicator());
+        }
+
+        if (snapshot.hasError) {
+          // Optional: log and show a soft failure state
+          return Center(
+            child: Padding(
+              padding: EdgeInsets.all(context.pagePadding),
+              child: Text(MaterialLocalizations.of(context).alertDialogLabel),
+            ),
+          );
+        }
+
         final items = svc.listByType('timeline', publicOnly: !auth.isLoggedIn);
         final grouped = _groupByYear(items);
 
