@@ -61,6 +61,7 @@ dependencies:
 
   # --- Local storage / prefs ---
   shared_preferences: ^2.5.3 # use new Async/WithCache APIs per package guidance
+  flutter_dotenv: ^6.0.0
 
   # --- Client-side encryption for private markdown ---
   cryptography: ^2.7.0 # AES-GCM, HKDF, etc.

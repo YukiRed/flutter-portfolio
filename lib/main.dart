@@ -4,9 +4,13 @@ import 'src/url_strategy_stub.dart'
 import 'app/app.dart';
 // 新增导入
 import 'app/config.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // 新增：加载环境变量（从.env文件）
+  await dotenv.load(fileName: ".env");
 
   // GitHub Pages: hash routing to avoid server rewrites (no-op on non-web)
   setHashUrlStrategy();

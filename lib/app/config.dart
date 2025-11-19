@@ -1,4 +1,4 @@
-import 'dart:io';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class AppConfig {
   // --- 公开配置（硬编码，无需环境变量）---
@@ -24,26 +24,30 @@ class AppConfig {
 
   // --- 敏感配置（从环境变量读取）---
   static String get authCanarySalt {
-    // return "Vdc5Cq7nQf6REKpXvwi9Iw==";
-    return Platform.environment['AUTH_CANARY_SALT'] ??
-        (throw Exception("AUTH_CANARY_SALT 环境变量未配置"));
+    return dotenv.get(
+      'AUTH_CANARY_SALT',
+      fallback: throw Exception("AUTH_CANARY_SALT 未配置"),
+    );
   }
 
   static String get authCanaryNonce {
-    // return "goCaHaPQyh0lmIAp";
-    return Platform.environment['AUTH_CANARY_NONCE'] ??
-        (throw Exception("AUTH_CANARY_NONCE 环境变量未配置"));
+    return dotenv.get(
+      'AUTH_CANARY_NONCE',
+      fallback: throw Exception("AUTH_CANARY_NONCE 未配置"),
+    );
   }
 
   static String get authCanaryData {
-    // return "hjQ=";
-    return Platform.environment['AUTH_CANARY_DATA'] ??
-        (throw Exception("AUTH_CANARY_DATA 环境变量未配置"));
+    return dotenv.get(
+      'AUTH_CANARY_DATA',
+      fallback: throw Exception("AUTH_CANARY_DATA 未配置"),
+    );
   }
 
   static String get authCanaryMac {
-    // return "VXb08nJsHtL8JnoBsD4Plg==";
-    return Platform.environment['AUTH_CANARY_MAC'] ??
-        (throw Exception("AUTH_CANARY_MAC 环境变量未配置"));
+    return dotenv.get(
+      'AUTH_CANARY_MAC',
+      fallback: throw Exception("AUTH_CANARY_MAC 未配置"),
+    );
   }
 }
