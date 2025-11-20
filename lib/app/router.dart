@@ -26,8 +26,7 @@ import '../features/timeline/index_page.dart';
 import '../features/timeline/detail_page.dart';
 import '../features/people/index_page.dart';
 import '../features/people/detail_page.dart';
-import '../features/products/index_page.dart';
-import '../features/products/detail_page.dart';
+import '../features/products/detail_page.dart' as products_detail;
 
 GoRouter buildRouter(ContentService content) {
   return GoRouter(
@@ -104,16 +103,14 @@ GoRouter buildRouter(ContentService content) {
 
           GoRoute(
             path: '/products',
-            name: 'products-index',
-            builder: (context, state) => const ProductsIndexPage(),
-            routes: [
-              GoRoute(
-                path: ':slug',
-                name: 'product-detail',
-                builder: (context, state) =>
-                    ProductDetailPage(slug: state.pathParameters['slug']!),
-              ),
-            ],
+            redirect: (context, state) => '/work?f=products',
+          ),
+          GoRoute(
+            path: '/products/:slug',
+            name: 'productDetail',
+            builder: (context, state) => products_detail.ProductDetailPage(
+              slug: state.pathParameters['slug']!,
+            ),
           ),
 
           GoRoute(

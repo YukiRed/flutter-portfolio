@@ -6,6 +6,7 @@ import '../../core/models/content_meta.dart';
 import '../../widgets/content_card.dart';
 import '../../widgets/section_header.dart';
 import '../../core/utils/l10n.dart';
+import '../../core/services/auth_service.dart';
 
 enum WorkFilter { all, projects, labs, products }
 
@@ -59,13 +60,20 @@ class _WorkIndexPageState extends State<WorkIndexPage> {
   Future<void> _load() async {
     setState(() => _loading = true);
     final svc = context.read<ContentService>();
+    final auth = context.read<AuthService>();
 
     // 🔑 Make sure the encrypted index + contents are loaded first
     await svc.ensureLoaded();
 
-    final projects = _sortByDate(svc.listByType('projects'));
-    final labs = _sortByDate(svc.listByType('labs'));
-    final products = _sortByDate(svc.listByType('products'));
+    final projects = _sortByDate(
+      svc.listByType('projects', publicOnly: !auth.isLoggedIn),
+    );
+    final labs = _sortByDate(
+      svc.listByType('labs', publicOnly: !auth.isLoggedIn),
+    );
+    final products = _sortByDate(
+      svc.listByType('products', publicOnly: !auth.isLoggedIn),
+    );
     final all = _sortByDate([...projects, ...labs, ...products]);
 
     setState(() {
@@ -85,11 +93,18 @@ class _WorkIndexPageState extends State<WorkIndexPage> {
     // URL updates ...
 
     final svc = context.read<ContentService>();
-    final projects = _sortByDate(svc.listByType('projects'));
-    final labs = _sortByDate(svc.listByType('labs'));
-    final products = _sortByDate(svc.listByType('products'));
-    final all = _sortByDate([...projects, ...labs, ...products]);
+    final auth = context.read<AuthService>();
 
+    final projects = _sortByDate(
+      svc.listByType('projects', publicOnly: !auth.isLoggedIn),
+    );
+    final labs = _sortByDate(
+      svc.listByType('labs', publicOnly: !auth.isLoggedIn),
+    );
+    final products = _sortByDate(
+      svc.listByType('products', publicOnly: !auth.isLoggedIn),
+    );
+    final all = _sortByDate([...projects, ...labs, ...products]);
     setState(() {
       _applyFilter(
         projects: projects,
