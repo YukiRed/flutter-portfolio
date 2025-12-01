@@ -64,7 +64,7 @@ dependencies:
   flutter_dotenv: ^6.0.0
 
   # --- Client-side encryption for private markdown ---
-  cryptography: ^2.7.0 # AES-GCM, HKDF, etc.
+  cryptography: ^2.9.0 # AES-GCM, HKDF, etc.
 
   # needed to use url strategy on web
   flutter_web_plugins:
