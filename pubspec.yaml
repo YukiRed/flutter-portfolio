@@ -57,7 +57,7 @@ dependencies:
   path: ^1.9.1
   collection: ^1.19.1
   intl: ^0.20.2 # dates & formatting
-  flutter_svg: ^2.2.2 # render SVG logos, icons in markdown
+  flutter_svg: ^2.2.3 # render SVG logos, icons in markdown
 
   # --- Local storage / prefs ---
   shared_preferences: ^2.5.3 # use new Async/WithCache APIs per package guidance
