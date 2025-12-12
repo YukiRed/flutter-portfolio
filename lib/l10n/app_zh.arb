@@ -2,7 +2,7 @@
   "@@locale": "zh",
   "@@last_modified": "Chinese localization with full metadata",
 
-  "appTitle": "Desmond Liew — 作品集",
+  "appTitle": "我的作品集",
   "@appTitle": {
     "description": "Application title shown in window title / browser tab."
   },

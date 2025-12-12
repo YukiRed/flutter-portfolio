@@ -9,7 +9,7 @@ class AppLocalizationsMs extends AppLocalizations {
   AppLocalizationsMs([String locale = 'ms']) : super(locale);
 
   @override
-  String get appTitle => 'Portfolio Desmond Liew';
+  String get appTitle => 'Portfolio Saya';
 
   @override
   String get navHome => 'Laman Utama';

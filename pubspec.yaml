@@ -52,6 +52,8 @@ dependencies:
 
   # --- Markdown content pipeline ---
   flutter_markdown_plus: ^1.0.5 # maintained fork of flutter_markdown
+  flutter_echarts: ^2.5.0
+  webview_flutter: ^4.9.0
   yaml: ^3.1.3 # parse front-matter
   http: ^1.6.0 # web fetch (if you ever host raw md separately)
   path: ^1.9.1

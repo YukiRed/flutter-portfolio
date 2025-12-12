@@ -2,7 +2,7 @@
 
 ### _Local-first • Markdown-driven • Privacy-first_
 
-This repository hosts **Desmond Liew’s personal portfolio**, built as a fully self-contained **Flutter Web app** deployed to GitHub Pages.
+This repository hosts **personal portfolio**, built as a fully self-contained **Flutter Web app** deployed to GitHub Pages.
 It renders Markdown files, supports private encrypted content, works offline, and requires **no backend or database**.
 
 This repo contains **the code only**.
@@ -14,8 +14,8 @@ All content lives in a separate **private repo**, pulled in as a git submodule.
 
 | Purpose                                  | Repo                                            |
 | ---------------------------------------- | ----------------------------------------------- |
-| **Main Flutter app (this repo)**         | `https://github.com/YukiRed/flutter-portfolio`  |
-| **Private Markdown content (submodule)** | `https://github.com/YukiRed/Portfolio-Contents` |
+| **Main Flutter app (this repo)**         | `https://github.com/DDesmond95/flutter-portfolio`  |
+| **Private Markdown content (submodule)** | `https://github.com/DDesmond95/Portfolio-Contents` |
 
 ---
 
@@ -66,7 +66,7 @@ assets/                      <-- git submodule
 ## 1. Clone with submodule
 
 ```
-git clone --recurse-submodules git@github.com:YukiRed/flutter-portfolio.git
+git clone --recurse-submodules git@github.com:DDesmond95/flutter-portfolio.git
 cd flutter-portfolio
 ```
 
@@ -102,7 +102,7 @@ Only used for local dev overrides.
 Create `.env` (ignored by git):
 
 ```
-SITE_NAME="Desmond Liew Portfolio"
+SITE_NAME="My Portfolio"
 THEME_PALETTE="wood"
 THEME_MODE="system"
 ```
@@ -118,7 +118,7 @@ Your private content repo is configured in `.gitmodules`:
 ```
 [submodule "assets"]
     path = assets
-    url  = https://github.com/YukiRed/Portfolio-Contents.git
+    url  = https://github.com/DDesmond95/Portfolio-Contents.git
 ```
 
 ## Pull latest content

@@ -1,4 +1,4 @@
-# Assets — Desmond Liew Portfolio
+# Assets — My Portfolio
 
 This document defines the structure, conventions, and purpose of all files under `/assets/`.  
 These assets serve as the **data layer** for the entire portfolio — powering all pages, projects, and content in a *local-first* architecture.

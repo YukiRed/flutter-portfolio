@@ -103,7 +103,7 @@ abstract class AppLocalizations {
   /// Application title shown in window title / browser tab.
   ///
   /// In en, this message translates to:
-  /// **'Desmond Liew — Portfolio'**
+  /// **'My Portfolio'**
   String get appTitle;
 
   /// Top navigation: link to the home page.
