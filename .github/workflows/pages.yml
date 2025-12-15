@@ -47,13 +47,6 @@ jobs:
       - name: Encrypt markdown content
         run: dart run tools/encrypt_content.dart --src-dir=assets/contents-src --out-dir=assets/contents
 
-      - name: Generate sitemap & RSS (with error handling)
-        run: |
-          dart run lib/tools/gen_sitemap.dart
-          dart run lib/tools/gen_rss.dart
-        # Only fail if critical (adjust based on your needs)
-        continue-on-error: true
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -75,6 +68,10 @@ jobs:
             echo "Error: main.dart.js not found in build output"
             exit 1
           fi
+          if [ ! -f "build/web/assets/.env" ]; then
+            echo "Error: .env not found in build output"
+            exit 1
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
@@ -93,6 +90,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          # Enable debug logging for deployment issues
-          log-level: debug
