@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
+
 import 'package:url_launcher/url_launcher.dart';
 import '../utils/responsive.dart';
 
@@ -68,7 +69,7 @@ class _MarkdownViewState extends State<MarkdownView> {
           ),
 
           // Inline code
-          code: textTheme.bodySmall?.copyWith(
+          code: textTheme.bodyMedium?.copyWith(
             fontFamily: 'monospace',
             backgroundColor: colorScheme.surfaceContainerHigh.withValues(
               alpha: 0.6,

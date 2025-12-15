@@ -34,10 +34,10 @@ dependencies:
     sdk: flutter
 
   # --- Routing / Navigation ---
-  go_router: ^17.0.0 # modern router w/ deep links + wev
+  go_router: ^17.0.1 # modern router w/ deep links + wev
 
   # --- UI / UX ---
-  google_fonts: ^6.3.2 # typography from fonts.google.com (official)
+  google_fonts: ^6.3.3 # typography from fonts.google.com (official)
   responsive_framework: ^1.5.1 # responsive breakpoints and layout helpers
   url_launcher: ^6.3.2 # open mailto:, https, etc. across platforms
   animations: ^2.1.1 # subtle page/element transitions
@@ -53,20 +53,22 @@ dependencies:
   # --- Markdown content pipeline ---
   flutter_markdown_plus: ^1.0.5 # maintained fork of flutter_markdown
   flutter_echarts: ^2.5.0
-  webview_flutter: ^4.9.0
+  markdown: ^7.3.0
+  flutter_widget_from_html: ^0.17.1
+  webview_flutter: ^4.13.0
   yaml: ^3.1.3 # parse front-matter
   http: ^1.6.0 # web fetch (if you ever host raw md separately)
   path: ^1.9.1
   collection: ^1.19.1
   intl: ^0.20.2 # dates & formatting
-  flutter_svg: ^2.2.2 # render SVG logos, icons in markdown
+  flutter_svg: ^2.2.3 # render SVG logos, icons in markdown
 
   # --- Local storage / prefs ---
-  shared_preferences: ^2.5.3 # use new Async/WithCache APIs per package guidance
+  shared_preferences: ^2.5.4 # use new Async/WithCache APIs per package guidance
   flutter_dotenv: ^6.0.0
 
   # --- Client-side encryption for private markdown ---
-  cryptography: ^2.7.0 # AES-GCM, HKDF, etc.
+  cryptography: ^2.9.0 # AES-GCM, HKDF, etc.
 
   # needed to use url strategy on web
   flutter_web_plugins:
@@ -84,7 +86,7 @@ dev_dependencies:
   flutter_lints: ^6.0.0
 
   build_runner: ^2.10.3 # if you generate any code (e.g., JSON models)
-  json_serializable: ^6.11.1 # for any generated models used by tools/CI
+  json_serializable: ^6.11.3 # for any generated models used by tools/CI
 
 # flutter_launcher_icons:
 #   android: "launcher_icon"
@@ -104,7 +106,7 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   generate: true
-  
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -199,7 +201,6 @@ flutter:
   #         weight: 700
   #       - asset: assets/fonts/NotoSans/NotoSans-Italic.ttf
   #         style: italic
-
 
   #   - family: NotoSansSC   # Simplified Chinese (Han)
   #     fonts:
